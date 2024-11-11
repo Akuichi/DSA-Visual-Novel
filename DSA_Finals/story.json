@@ -1,0 +1,69 @@
+{
+  "scenes": {
+    "0": {
+      "_comment": "Scene 0",
+      "text": "You're in a Dream, your mind is awake. You try to wake up in real life but you cannot.",
+      "image": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    },
+    "1": {
+    "text": "You heard footsteps approaching",
+    "image": "images/scene_0.png",
+    "options": {
+        "1": {
+          "text": "Prepare yourself",
+          "nextScene": 2
+        }
+      }
+    },
+    "2": {
+      "text": "A wild orange appeared, she seems to be lost.",
+      "image": "images/scene_1.png",
+      "options": {
+		  "1": {
+			  "text": "Try to ask her if she's lost",
+			  "nextScene": 4
+		  },
+		  "2": {
+			  "text": "Run",
+			  "nextScene": 3
+			}
+        }
+	  },
+	  "3": {
+      "text": "You tried to run, but time seems to rewind when you do",
+      "image": "images/scene_1.png",
+      "options": {
+		  "1": {
+			  "text": "Try to ask her if she's lost",
+			  "nextScene": 4
+		  },
+		  "2": {
+			  "text": "Run",
+			  "nextScene": 3
+			}
+        }
+	  },
+    "4": {
+      "text": "How did you know that?",
+      "character": "???",
+      "image": "images/scene_1.png",
+      "options": {
+		  "1": {
+			  "text": "----",
+			  "nextScene": 3
+		  },
+		  "2": {
+			  "text": "----",
+			  "nextScene": 3
+			}
+        }
+	  }
+    }
+  }
+}
