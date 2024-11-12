@@ -1,5 +1,6 @@
 {
-  "scenes": {
+  "scenes":
+  {
     "0": {
       "_comment": "Scene 0",
       "text": "You find yourself trapped in a dream, fully aware that your mind is awake. No matter how hard you try, you can't seem to wake up",
@@ -64,6 +65,5 @@
 			}
         }
 	  }
-    }
   }
 }
