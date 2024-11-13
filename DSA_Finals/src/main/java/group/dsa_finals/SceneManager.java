@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.event.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -36,116 +37,11 @@ public class SceneManager {
     public SceneManager(int currentScene) {
         //Load the story data from the JSON file
         LoadStoryData();
-
-        _frame = new JFrame("Visual Novel");
-        _frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        _frame.setSize(1280, 720);
-        _frame.setResizable(false);
-        _frame.setLayout(new BorderLayout());
-
-        //Image panel
-        _imageLabel = new JLabel();
-        _imageLabel.setHorizontalAlignment(JLabel.CENTER);
-        _frame.add(_imageLabel, BorderLayout.NORTH);//Add to frame
-
-        //text panel to put text area (dialogue text)
-        _textPanel = new JPanel();
-        _textPanel.setLayout(new BorderLayout());
-        _textPanel.setBackground(Color.BLACK);
-        _textPanel.setPreferredSize(new Dimension(1280, 100)); //Height keep yung width 1280
-        _textPanel.setMaximumSize(new Dimension(1280, 150));
-        _textPanel.setBorder(BorderFactory.createEmptyBorder());
-
-        //jLabel to show the name of the character speaking if there is one
-        _dialogueCharacterLabel = new JLabel();
-        _dialogueCharacterLabel.setPreferredSize(new Dimension(1280, 25));
-        _dialogueCharacterLabel.setBackground(Color.BLACK);
-        _dialogueCharacterLabel.setForeground(Color.WHITE);
-        _dialogueCharacterLabel.setText("YES");
-        _dialogueCharacterLabel.setFont(new Font("Roboto", Font.BOLD, 18));
-        _dialogueCharacterLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
-        
-        //Text area, this is the dialogue text
-        _textArea = new JTextArea();
-        _textArea.setEditable(false); //Disable typing
-        _textArea.setLineWrap(true); //To auto wrap para di lumagpas text sa window
-        _textArea.setWrapStyleWord(true); //para buo parin yung word pag na cut off siya to the next line
-        _textArea.setBackground(Color.DARK_GRAY);  //Background color for text area
-        _textArea.setForeground(Color.WHITE);  //Text color
-        _textArea.setFont(new Font("Roboto", Font.PLAIN, 18)); //Font
-        _textArea.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
-
-        _textPanel.add(new JScrollPane(_textArea), BorderLayout.CENTER); //Add sa textPanel yung text area and include scrollbar         
-        _textPanel.add(_dialogueCharacterLabel, BorderLayout.NORTH);
-        
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS)); //Y for vertical layout ng boxlayout
-
-        //Create buttons---
-        _option1Button = new JButton();
-        _option2Button = new JButton();
-
-        //1280 width para buong width ng screen, then height ng buttons
-        _option1Button.setPreferredSize(new Dimension(1280, 25));
-        _option2Button.setPreferredSize(new Dimension(1280, 25));
-
-        _option1Button.setMaximumSize(new Dimension(Integer.MAX_VALUE, 25));
-        _option2Button.setMaximumSize(new Dimension(Integer.MAX_VALUE, 25));
-
-        _option1Button.setMargin(new Insets(0, 0, 0, 0));
-        _option2Button.setMargin(new Insets(0, 0, 0, 0));        
-        
-        Color buttonBackgroundColor = Color.DARK_GRAY;
-        _option1Button.setBackground(buttonBackgroundColor);
-        _option2Button.setBackground(buttonBackgroundColor);
-       
-        _option1Button.setForeground(Color.WHITE);
-        _option2Button.setForeground(Color.WHITE);
-
-        //Remove button border
-        _option1Button.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
-        _option2Button.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
-        
-        _option1Button.setFont(new Font("Roboto", Font.PLAIN, 18));
-        _option2Button.setFont(new Font("Roboto", Font.PLAIN, 18));
-
-        _option1Button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        _option2Button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        
-        _option1Button.setHorizontalAlignment(SwingConstants.LEFT);
-        _option2Button.setHorizontalAlignment(SwingConstants.LEFT);
-        //-----
         
         
-
-        //Add buttons to the buttonPanel
-        buttonPanel.add(_option1Button);
-        buttonPanel.add(_option2Button);
-
-        JPanel dialoguePanel = new JPanel(new BorderLayout()); //Dialogue panel kugn san natin lalagay yung Dialogue text (sa taas), Button choices (sa baba)
-        dialoguePanel.add(_textPanel, BorderLayout.NORTH);  //Add text area panel
-        dialoguePanel.add(buttonPanel, BorderLayout.SOUTH); //Add buttons panel        
-        dialoguePanel.setBackground(Color.DARK_GRAY);
-
-        _frame.add(_imageLabel, BorderLayout.NORTH);
-        _frame.add(dialoguePanel, BorderLayout.SOUTH);
-
-        //Button listeners para sa choices button
-        _option1Button.addActionListener(e -> HandleDialogueOption(1));
-        _option2Button.addActionListener(e -> HandleDialogueOption(2));
-
-        MouseAdapter StopTypingEffectListener = new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                StopTypingEffect();  //Call yung stop typing effect
-            }
-        };
-
-        //register sa event na ginawa natin^
-        _frame.addMouseListener(StopTypingEffectListener);
-        _textArea.addMouseListener(StopTypingEffectListener);
-
-        //Start with the first scene (di pa ko nakagawa ng save system)
+        DrawGUIComponents();        
+        
+        //Save passed scene id as current scene
         _currentScene = currentScene;
         DisplayScene();
 
@@ -300,5 +196,124 @@ public class SceneManager {
         }
         
     }
+    
+    private void DrawGUIComponents(){
+        _frame = new JFrame("Visual Novel");
+        _frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        _frame.setSize(1280, 720);
+        _frame.setResizable(false);
+        _frame.setLayout(new BorderLayout());
+        _frame.setLocationRelativeTo(null);
 
+        //Image panel
+        _imageLabel = new JLabel();
+        _imageLabel.setHorizontalAlignment(JLabel.CENTER);
+        _frame.add(_imageLabel, BorderLayout.NORTH);//Add to frame
+
+        //text panel to put text area (dialogue text)
+        _textPanel = new JPanel();
+        _textPanel.setLayout(new BorderLayout());
+        _textPanel.setBackground(Color.BLACK);
+        _textPanel.setPreferredSize(new Dimension(1280, 100)); //Height keep yung width 1280
+        _textPanel.setMaximumSize(new Dimension(1280, 150));
+        _textPanel.setBorder(BorderFactory.createEmptyBorder());
+
+        //jLabel to show the name of the character speaking if there is one
+        _dialogueCharacterLabel = new JLabel();
+        _dialogueCharacterLabel.setPreferredSize(new Dimension(1000, 25));
+        _dialogueCharacterLabel.setBackground(Color.BLACK);
+        _dialogueCharacterLabel.setForeground(Color.WHITE);
+        _dialogueCharacterLabel.setText("YES");
+        _dialogueCharacterLabel.setFont(new Font("Roboto", Font.BOLD, 18));
+        _dialogueCharacterLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+        
+        //Text area, this is the dialogue text
+        _textArea = new JTextArea();
+        _textArea.setEditable(false); //Disable typing
+        _textArea.setLineWrap(true); //To auto wrap para di lumagpas text sa window
+        _textArea.setWrapStyleWord(true); //para buo parin yung word pag na cut off siya to the next line
+        _textArea.setBackground(Color.DARK_GRAY);  //Background color for text area
+        _textArea.setForeground(Color.WHITE);  //Text color
+        _textArea.setFont(new Font("Roboto", Font.PLAIN, 18)); //Font
+        _textArea.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
+        _textPanel.add(new JScrollPane(_textArea), BorderLayout.CENTER); //Add sa textPanel yung text area and include scrollbar         
+        _textPanel.add(_dialogueCharacterLabel, BorderLayout.NORTH);
+        
+        
+        
+        
+        //Create panel for dialogue option buttons
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS)); //Y for vertical layout ng boxlayout
+
+        //Create buttons---
+        _option1Button = new JButton();
+        _option2Button = new JButton();
+
+        //1280 width para buong width ng screen, then height ng buttons
+        _option1Button.setPreferredSize(new Dimension(1280, 25));
+        _option2Button.setPreferredSize(new Dimension(1280, 25));
+
+        _option1Button.setMaximumSize(new Dimension(Integer.MAX_VALUE, 25));
+        _option2Button.setMaximumSize(new Dimension(Integer.MAX_VALUE, 25));
+
+        _option1Button.setMargin(new Insets(0, 0, 0, 0));
+        _option2Button.setMargin(new Insets(0, 0, 0, 0));        
+        
+        Color buttonBackgroundColor = Color.DARK_GRAY;
+        _option1Button.setBackground(buttonBackgroundColor);
+        _option2Button.setBackground(buttonBackgroundColor);
+       
+        _option1Button.setForeground(Color.WHITE);
+        _option2Button.setForeground(Color.WHITE);
+
+        //Remove button border
+        _option1Button.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+        _option2Button.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+        
+        _option1Button.setFont(new Font("Roboto", Font.PLAIN, 18));
+        _option2Button.setFont(new Font("Roboto", Font.PLAIN, 18));
+
+        _option1Button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        _option2Button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        
+        _option1Button.setHorizontalAlignment(SwingConstants.LEFT);
+        _option2Button.setHorizontalAlignment(SwingConstants.LEFT);
+        //-----
+        
+        
+
+        //Add buttons to the buttonPanel
+        buttonPanel.add(_option1Button);
+        buttonPanel.add(_option2Button);
+
+        JPanel dialoguePanel = new JPanel(new BorderLayout()); //Dialogue panel kugn san natin lalagay yung Dialogue text (sa taas), Button choices (sa baba)
+        dialoguePanel.add(_textPanel, BorderLayout.NORTH);  //Add text area panel
+        dialoguePanel.add(buttonPanel, BorderLayout.SOUTH); //Add buttons panel        
+        dialoguePanel.setBackground(Color.DARK_GRAY);
+
+        _frame.add(_imageLabel, BorderLayout.NORTH);
+        _frame.add(dialoguePanel, BorderLayout.SOUTH);
+
+        //Button listeners para sa choices button
+        _option1Button.addActionListener(e -> HandleDialogueOption(1));
+        _option2Button.addActionListener(e -> HandleDialogueOption(2));
+
+        MouseAdapter StopTypingEffectListener = new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                StopTypingEffect();  //Call yung stop typing effect
+            }
+        };
+
+        //register sa event na ginawa natin^
+        _frame.addMouseListener(StopTypingEffectListener);
+        _textArea.addMouseListener(StopTypingEffectListener);
+
+    }
+    
+    
+    
+    
 }
