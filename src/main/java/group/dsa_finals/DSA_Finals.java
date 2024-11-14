@@ -11,8 +11,6 @@ package group.dsa_finals;
 public class DSA_Finals {
 
     public static void main(String[] args) {
-        var visualNovel = new SceneManager(0);
-        //var mainForm = new MainForm();
-        //mainForm.setVisible(true);
+        new SceneManager(0);
     }
 }

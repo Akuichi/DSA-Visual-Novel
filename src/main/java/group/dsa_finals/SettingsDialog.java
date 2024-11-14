@@ -21,21 +21,35 @@ public class SettingsDialog extends JDialog {
     
     public SettingsDialog(JFrame parentFrame){
         super(parentFrame, "Settings", true);
-        
-        setLayout(new FlowLayout());
+
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         setSize(600,400);
         setLocationRelativeTo(parentFrame);
         
         // text speed slider
         JLabel textSpeedLabel = new JLabel("Text Speed");
-        _textSpeedSlider = new JSlider(0,100,50);
-        _textSpeedSlider.setMajorTickSpacing(20);
+        _textSpeedSlider = new JSlider(10,100,50);
+        _textSpeedSlider.setMajorTickSpacing(90);
         _textSpeedSlider.setPaintTicks(true);
         _textSpeedSlider.setPaintLabels(true);
-        
+
+        JPanel textSpeedPanel = new JPanel();
+        textSpeedPanel.setLayout(new FlowLayout());
+        textSpeedPanel.setPreferredSize(new Dimension(400, 50)); //Height keep yung width 1280
+        textSpeedPanel.setMaximumSize(new Dimension(400, 50));
+
+
+
+        textSpeedPanel.add(textSpeedLabel);
+        textSpeedPanel.add(_textSpeedSlider);
+
         _saveButton = new JButton("Save");
         _cancelButton = new JButton("Cancel");
-        
+
+        textSpeedPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        _saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        _cancelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         _saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,10 +63,12 @@ public class SettingsDialog extends JDialog {
                 dispose();
             }
         });
-        
-        add(textSpeedLabel);
-        add(_textSpeedSlider);
+
+        add(Box.createVerticalStrut(100));
+        add(textSpeedPanel);
+        add(Box.createVerticalStrut(100));
         add(_saveButton);
+        add(Box.createVerticalStrut(10));
         add(_cancelButton);
     }
 }
