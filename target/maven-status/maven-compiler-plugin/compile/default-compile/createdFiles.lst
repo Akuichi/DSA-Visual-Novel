@@ -1,5 +1,10 @@
 group\dsa_finals\SceneManager$1.class
 group\dsa_finals\SceneManager.class
-group\dsa_finals\MainForm$1.class
-group\dsa_finals\MainForm.class
+group\dsa_finals\PauseMenuDialog.class
 group\dsa_finals\DSA_Finals.class
+group\dsa_finals\SettingsDialog$2.class
+group\dsa_finals\SettingsDialog.class
+group\dsa_finals\PauseMenuDialog$2.class
+group\dsa_finals\SceneManager$2.class
+group\dsa_finals\PauseMenuDialog$1.class
+group\dsa_finals\SettingsDialog$1.class

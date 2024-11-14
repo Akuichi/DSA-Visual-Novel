@@ -204,6 +204,8 @@ public class SceneManager {
         _frame.setResizable(false);
         _frame.setLayout(new BorderLayout());
         _frame.setLocationRelativeTo(null);
+        _frame.setFocusable(true);
+        _frame.requestFocusInWindow();
 
         //Image panel
         _imageLabel = new JLabel();
@@ -307,6 +309,19 @@ public class SceneManager {
             }
         };
 
+        
+        _frame.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                //Check if ESC yung button pressed
+                if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                    System.out.println("Escape key pressed!");
+                    PauseMenuDialog pauseDialog = new PauseMenuDialog(_frame);
+                    pauseDialog.setVisible(true);
+                    //Open pause menu dialog
+                }
+            }
+        });
         //register sa event na ginawa natin^
         _frame.addMouseListener(StopTypingEffectListener);
         _textArea.addMouseListener(StopTypingEffectListener);

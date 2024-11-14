@@ -23,11 +23,11 @@
       }
     },
     "2": {
-      "text": "A wild stickman appeared, he seems to be lost.",
-      "image": "images/scene_2.png",
+      "text": "A wild orange appeared, she seems to be lost.",
+      "image": "images/scene_1.png",
       "options": {
 		  "1": {
-			  "text": "Try to ask him if he's lost",
+			  "text": "Try to ask her if she's lost",
 			  "nextScene": 4
 		  },
 		  "2": {
@@ -38,10 +38,10 @@
 	  },
 	  "3": {
       "text": "You tried to run, but time seems to rewind when you do",
-      "image": "images/scene_2.png",
+      "image": "images/scene_1.png",
       "options": {
 		  "1": {
-			  "text": "Try to ask him if he's lost",
+			  "text": "Try to ask her if she's lost",
 			  "nextScene": 4
 		  },
 		  "2": {
@@ -51,9 +51,10 @@
         }
 	  },
     "4": {
+      "_comment": "Scene 0",
       "text": "How did you know that?",
       "character": "???",
-      "image": "images/scene_2.png",
+      "image": "images/scene_1.png",
       "options": {
 		  "1": {
 			  "text": "----",
