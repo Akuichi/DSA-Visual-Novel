@@ -13,13 +13,14 @@ import java.awt.event.ActionListener;
  *
  * @author Akutan
  */
-public class SettingsDialog extends JDialog {
-    
+public class SettingsDialog extends JDialog
+{
     private JSlider _textSpeedSlider;
     private JButton _saveButton;
     private JButton _cancelButton;
     
-    public SettingsDialog(JFrame parentFrame){
+    public SettingsDialog(JFrame parentFrame)
+    {
         super(parentFrame, "Settings", true);
 
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -50,18 +51,14 @@ public class SettingsDialog extends JDialog {
         _saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _cancelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        _saveButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
+        _saveButton.addActionListener(e ->
+        {
+
         });
         
-        _cancelButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
+        _cancelButton.addActionListener(e ->
+        {
+            dispose();
         });
 
         add(Box.createVerticalStrut(100));

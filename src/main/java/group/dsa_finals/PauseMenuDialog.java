@@ -6,8 +6,6 @@ package group.dsa_finals;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 /**
  *
  * @author Akutan
@@ -15,7 +13,8 @@ import java.awt.event.ActionListener;
 public class PauseMenuDialog extends JDialog {
     private JButton _resumeButton, _settingsButton, _saveButton, _loadButton;
     
-    public PauseMenuDialog(JFrame parentFrame){
+    public PauseMenuDialog(JFrame parentFrame)
+    {
         super(parentFrame, "Game Paused", true); //parent frame, window title, true = meaning modal siya, so parang naka lock yung main window unless na exit tong dialog
         
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -35,47 +34,28 @@ public class PauseMenuDialog extends JDialog {
 
 
         //Resume button
-        _resumeButton.addActionListener(new ActionListener() 
-        {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                dispose();
-            }
-        });
+        _resumeButton.addActionListener(e -> dispose());
 
 
         //Settings button
-        _settingsButton.addActionListener(new ActionListener() 
+        _settingsButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                var settingsDialog = new SettingsDialog(parentFrame);
-                dispose();
-                settingsDialog.setVisible(true);
-                
-            }
+            var settingsDialog = new SettingsDialog(parentFrame);
+            dispose();
+            settingsDialog.setVisible(true);
+
         });
 
         //Save button
-        _saveButton.addActionListener(new ActionListener()
+        _saveButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
 
-            }
         });
 
         //Load button
-        _loadButton.addActionListener(new ActionListener()
+        _loadButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
 
-            }
         });
         
         add(Box.createVerticalStrut(100));
