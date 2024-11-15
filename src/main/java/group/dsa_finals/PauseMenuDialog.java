@@ -31,28 +31,50 @@ public class PauseMenuDialog extends JDialog {
         _resumeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _loadButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        
-        
-        
-        
+
+
+
+        //Resume button
         _resumeButton.addActionListener(new ActionListener() 
         {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 dispose();
             }
         });
-        
-        
-        
+
+
+        //Settings button
         _settingsButton.addActionListener(new ActionListener() 
         {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 var settingsDialog = new SettingsDialog(parentFrame);
                 dispose();
                 settingsDialog.setVisible(true);
                 
+            }
+        });
+
+        //Save button
+        _saveButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+
+            }
+        });
+
+        //Load button
+        _loadButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+
             }
         });
         
