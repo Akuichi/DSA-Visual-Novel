@@ -348,7 +348,12 @@ public class SceneManager
             }
         };
 
-        
+        //register sa event na ginawa natin^
+        _frame.addMouseListener(StopTypingEffectListener);
+        _textArea.addMouseListener(StopTypingEffectListener);
+
+
+        //New key listener for ESC button para sa pause menu
         _frame.addKeyListener(new KeyAdapter()
         {
             @Override
@@ -357,16 +362,12 @@ public class SceneManager
                 //Check if ESC yung button pressed
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
                 {
-                    System.out.println("Escape key pressed!");
                     PauseMenuDialog pauseDialog = new PauseMenuDialog(_frame);
                     pauseDialog.setVisible(true);
                     //Open pause menu dialog
                 }
             }
         });
-        //register sa event na ginawa natin^
-        _frame.addMouseListener(StopTypingEffectListener);
-        _textArea.addMouseListener(StopTypingEffectListener);
 
     }
     

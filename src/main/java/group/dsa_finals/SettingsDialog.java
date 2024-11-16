@@ -53,7 +53,10 @@ public class SettingsDialog extends JDialog
 
         _saveButton.addActionListener(e ->
         {
-
+            dispose();
+            System.out.println("Test");
+            var saveManager = new SaveManager();
+            saveManager.SaveGame("1");
         });
         
         _cancelButton.addActionListener(e ->
