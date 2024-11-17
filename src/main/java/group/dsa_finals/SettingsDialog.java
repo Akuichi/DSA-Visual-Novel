@@ -7,30 +7,40 @@ package group.dsa_finals;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 /**
  *
  * @author Akutan
  */
 public class SettingsDialog extends JDialog
 {
+    private int _currentScene;
+    private SceneManager _sceneManager;
     private JSlider _textSpeedSlider;
     private JButton _saveButton;
     private JButton _cancelButton;
     
-    public SettingsDialog(JFrame parentFrame)
+    public SettingsDialog(JFrame parentFrame, SceneManager sceneManager)
     {
         super(parentFrame, "Settings", true);
-
+        _sceneManager = sceneManager;
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         setSize(600,400);
         setLocationRelativeTo(parentFrame);
-        
+
+        DrawGUIComponents();
+        LoadSettings();
+
+    }
+
+    private void DrawGUIComponents()
+    {
+
+
         // text speed slider
         JLabel textSpeedLabel = new JLabel("Text Speed");
-        _textSpeedSlider = new JSlider(10,100,50);
-        _textSpeedSlider.setMajorTickSpacing(90);
+        _textSpeedSlider = new JSlider(10,200,50);
+        //_textSpeedSlider.setMajorTickSpacing(90);
         _textSpeedSlider.setPaintTicks(true);
         _textSpeedSlider.setPaintLabels(true);
 
@@ -51,16 +61,12 @@ public class SettingsDialog extends JDialog
         _saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _cancelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        _saveButton.addActionListener(e ->
-        {
-            dispose();
-            System.out.println("Test");
-            var saveManager = new SaveManager();
-            saveManager.SaveGame("1");
-        });
-        
+        //Save settings
+        _saveButton.addActionListener(e -> SaveSettings());
+
         _cancelButton.addActionListener(e ->
         {
+            System.out.println("Test");
             dispose();
         });
 
@@ -71,4 +77,23 @@ public class SettingsDialog extends JDialog
         add(Box.createVerticalStrut(10));
         add(_cancelButton);
     }
+
+
+    private void LoadSettings()
+    {
+        var fileManager = new FileManager(this, _sceneManager);
+        int textSpeed = 210 - fileManager.GetTextSpeed();
+        _sceneManager.textSpeed = textSpeed;
+        _textSpeedSlider.setValue(textSpeed);
+    }
+
+    public void SaveSettings()
+    {
+        int textSpeed = 210 - _textSpeedSlider.getValue();
+        _sceneManager.textSpeed = textSpeed;
+        var fileManager = new FileManager(this, _sceneManager);
+        fileManager.SaveSettings(textSpeed);
+    }
+
+
 }

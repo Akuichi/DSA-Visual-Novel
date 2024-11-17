@@ -23,30 +23,35 @@ import javax.imageio.ImageIO;
 
 public class SceneManager
 {
-
-    private JFrame _frame;
+    public JFrame frame;
     private JLabel _imageLabel, _dialogueCharacterLabel;
     private JTextArea _textArea;
     private JButton _option1Button, _option2Button;
     private JPanel _textPanel;
     private JsonNode _storyData;
     private Thread _typingThread;
-    public int textSpeed = 50;
-    private int _currentScene;
+    private final SceneManager _sceneManager;
+    public int textSpeed;
+    public int currentScene;
 
     public SceneManager(int currentScene)
     {
+        _sceneManager = this;
         //Load the story data from the JSON file
         LoadStoryData();
         
         
-        DrawGUIComponents();        
-        
+        DrawGUIComponents();
+
+        var fileManager = new FileManager(null,this);
+        textSpeed = fileManager.GetTextSpeed();
+
         //Save passed scene id as current scene
-        _currentScene = currentScene;
+        this.currentScene = currentScene;
         DisplayScene();
 
-        _frame.setVisible(true);
+
+        frame.setVisible(true);
     }
 
     private void LoadStoryData()
@@ -66,9 +71,9 @@ public class SceneManager
         }
     }
 
-    private void DisplayScene()
+    public void DisplayScene()
     {
-        JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(_currentScene)); //get from json the scene node (scene number)
+        JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene)); //get from json the scene node (scene number)
         if (sceneNode == null)
         {  //If blank yung scenenode for some reason may mali sa JSON
             _textArea.setText("Scene not found");
@@ -105,9 +110,9 @@ public class SceneManager
                 for (int i = 0; i < dialogueText.length(); i++)
                 { //Simple for loop to print characters of string 1 by 1
                     _textArea.append(String.valueOf(dialogueText.charAt(i)));
-                    Thread.sleep(textSpeed); // Wait for (textSpeed variable speed) before typing the next character 
-                                            // no way to adjust this yet but it will be added, default for now is 50ms
+                    Thread.sleep(textSpeed); // Wait for (textSpeed variable speed) before typing the next character
                 }
+                Thread.sleep(200); //wait 200ms before showing buttons
                 LoadDialogueButtons(); //If done na typing show buttons
             }
             catch (InterruptedException e)
@@ -152,7 +157,7 @@ public class SceneManager
 
     private void LoadDialogueButtons()
     {
-        JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(_currentScene)); //get from json the scene node (scene number)
+        JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene)); //get from json the scene node (scene number)
         if (sceneNode == null)
         {
             _textArea.setText("Scene not found");
@@ -204,15 +209,15 @@ public class SceneManager
     //Eto yung event na ginawa para sa dialogue choices button the (int option) here refers to the option number (1, 2) in our case sa ngayon
     private void HandleDialogueOption(int option)
     {
-            JsonNode optionsNode = _storyData.get("scenes").get(String.valueOf(_currentScene)).get("options"); //Get from current scene yung options
+            JsonNode optionsNode = _storyData.get("scenes").get(String.valueOf(currentScene)).get("options"); //Get from current scene yung options
         if (optionsNode.has(String.valueOf(option))) //If may option (from int option, this is either 1 or 2) continue
         {
-            _currentScene = optionsNode.get(String.valueOf(option)).get("nextScene").asInt(); //Store the next scene ID sa result ng option choice as int
+            currentScene = optionsNode.get(String.valueOf(option)).get("nextScene").asInt(); //Store the next scene ID sa result ng option choice as int
             DisplayScene(); //Display Scene kasi iba na yung currentScene
         }
         else
         {
-            JOptionPane.showMessageDialog(_frame, "No valid option selected."); //Just to know if di na configure ng tama
+            JOptionPane.showMessageDialog(frame, "No valid option selected."); //Just to know if di na configure ng tama
         }
     }
 
@@ -222,7 +227,7 @@ public class SceneManager
         { 
             _typingThread.interrupt(); // Interrupt the typing thread
             // Display the full text immediately
-            JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(_currentScene));
+            JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene));
             if (sceneNode != null)
             {
                 _textArea.setText(sceneNode.get("text").asText());
@@ -235,22 +240,24 @@ public class SceneManager
     
     private void DrawGUIComponents()
     {
-        _frame = new JFrame("Visual Novel");
-        _frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        _frame.setSize(1280, 720);
-        _frame.setResizable(false);
-        _frame.setLayout(new BorderLayout());
-        _frame.setLocationRelativeTo(null);
-        _frame.setFocusable(true);
-        _frame.requestFocusInWindow();
+        frame = new JFrame("Visual Novel");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1280, 720);
+        frame.setResizable(false);
+        frame.setLayout(new BorderLayout());
+        frame.setLocationRelativeTo(null);
+        frame.setFocusable(true);
+        frame.requestFocusInWindow();
 
         //Image panel
         _imageLabel = new JLabel();
         _imageLabel.setHorizontalAlignment(JLabel.CENTER);
-        _frame.add(_imageLabel, BorderLayout.NORTH);//Add to frame
+        _imageLabel.setFocusable(false);
+        frame.add(_imageLabel, BorderLayout.NORTH);//Add to frame
 
         //text panel to put text area (dialogue text)
         _textPanel = new JPanel();
+        _textPanel.setFocusable(false);
         _textPanel.setLayout(new BorderLayout());
         _textPanel.setBackground(Color.BLACK);
         _textPanel.setPreferredSize(new Dimension(1280, 100)); //Height keep yung width 1280
@@ -276,11 +283,11 @@ public class SceneManager
         _textArea.setFont(new Font("Roboto", Font.PLAIN, 18)); //Font
         _textArea.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
 
+
+
         _textPanel.add(new JScrollPane(_textArea), BorderLayout.CENTER); //Add sa textPanel yung text area and include scrollbar         
         _textPanel.add(_dialogueCharacterLabel, BorderLayout.NORTH);
-        
-        
-        
+
         
         //Create panel for dialogue option buttons
         JPanel buttonPanel = new JPanel();
@@ -289,6 +296,8 @@ public class SceneManager
         //Create buttons---
         _option1Button = new JButton();
         _option2Button = new JButton();
+
+
 
         //1280 width para buong width ng screen, then height ng buttons
         _option1Button.setPreferredSize(new Dimension(1280, 25));
@@ -332,8 +341,17 @@ public class SceneManager
         dialoguePanel.add(buttonPanel, BorderLayout.SOUTH); //Add buttons panel        
         dialoguePanel.setBackground(Color.DARK_GRAY);
 
-        _frame.add(_imageLabel, BorderLayout.NORTH);
-        _frame.add(dialoguePanel, BorderLayout.SOUTH);
+
+        frame.add(_imageLabel, BorderLayout.NORTH);
+        frame.add(dialoguePanel, BorderLayout.SOUTH);
+
+        _dialogueCharacterLabel.setFocusable(false);
+        _imageLabel.setFocusable(false);
+        _textPanel.setFocusable(false);
+        _textArea.setFocusable(false);
+        _option1Button.setFocusable(false);
+        _option2Button.setFocusable(false);
+
 
         //Button listeners para sa choices button
         _option1Button.addActionListener(e -> HandleDialogueOption(1));
@@ -349,12 +367,13 @@ public class SceneManager
         };
 
         //register sa event na ginawa natin^
-        _frame.addMouseListener(StopTypingEffectListener);
-        _textArea.addMouseListener(StopTypingEffectListener);
+        frame.addMouseListener(StopTypingEffectListener);
+        dialoguePanel.addMouseListener(StopTypingEffectListener);
+        //_textArea.addMouseListener(StopTypingEffectListener);
 
 
         //New key listener for ESC button para sa pause menu
-        _frame.addKeyListener(new KeyAdapter()
+        frame.addKeyListener(new KeyAdapter()
         {
             @Override
             public void keyPressed(KeyEvent e)
@@ -362,7 +381,7 @@ public class SceneManager
                 //Check if ESC yung button pressed
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
                 {
-                    PauseMenuDialog pauseDialog = new PauseMenuDialog(_frame);
+                    PauseMenuDialog pauseDialog = new PauseMenuDialog(frame, _sceneManager);
                     pauseDialog.setVisible(true);
                     //Open pause menu dialog
                 }

@@ -8,9 +8,11 @@ package group.dsa_finals;
  *
  * @author Akutan
  */
-public class DSA_Finals {
+public class DSA_Finals
+{
 
-    public static void main(String[] args) {
-        new SceneManager(0);
+    public static void main(String[] args)
+    {
+        new MainMenu();
     }
 }
