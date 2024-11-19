@@ -2,9 +2,9 @@
   "scenes":
   {
     "0": {
-      "_comment": "Scene 0",
-      "text": "You find yourself trapped in a dream, fully aware that your mind is awake. No matter how hard you try, you can't seem to wake up",
-      "image": "images/scene_0.png",
+      "_comment": "Part of Scene 1",
+      "text": "*You still hear the voices*",
+      "bg_img": "images/scene_0.png",
       "options": {
         "1": {
           "text": "Continue",
@@ -13,58 +13,273 @@
       }
     },
     "1": {
-    "text": "You heard footsteps approaching",
-    "image": "images/scene_0.png",
-    "options": {
+      "_comment": "Part of Scene 1",
+      "text": "“...It’s your fault they died…”“...I’m doing this for you…” “...I’ll protect you…” “...They did this to you…”",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
         "1": {
-          "text": "Prepare yourself",
+          "text": "Continue",
           "nextScene": 2
         }
       }
     },
     "2": {
-      "text": "A wild orange appeared, she seems to be lost.",
-      "image": "images/scene_1.png",
+      "_comment": "Part of Scene 1",
+      "text": "*Alarm Noises*",
+      "bg_img": "images/bedroom_day.png",
       "options": {
-		  "1": {
-			  "text": "Try to ask her if she's lost",
-			  "nextScene": 4
-		  },
-		  "2": {
-			  "text": "Run",
-			  "nextScene": 3
-			}
+        "1": {
+          "text": "Continue",
+          "nextScene": 3
         }
-	  },
-	  "3": {
-      "text": "You tried to run, but time seems to rewind when you do",
-      "image": "images/scene_1.png",
+      }
+    },
+    "3": {
+      "_comment": "Part of Scene 1",
+      "text": "Hello? Dear?..Oh! You're awake!",
+      "character": "Mother",
+      "char_img": "images/characters/mother_talk.png",
+      "bg_img": "images/bedroom_day.png",
       "options": {
-		  "1": {
-			  "text": "Try to ask her if she's lost",
-			  "nextScene": 4
-		  },
-		  "2": {
-			  "text": "Run",
-			  "nextScene": 3
-			}
+        "1": {
+          "text": "Continue",
+          "nextScene": 4
         }
-	  },
+      }
+    },
     "4": {
-      "_comment": "Scene 0",
-      "text": "How did you know that?",
-      "character": "???",
-      "image": "images/scene_1.png",
+      "_comment": "Part of Scene 1",
+      "text": "Thank goodness! How are you feeling? Are you feeling well?",
+      "character": "Mother",
+      "char_img": "images/characters/mother_talk.png",
+      "bg_img": "images/bedroom_day.png",
       "options": {
-		  "1": {
-			  "text": "----",
-			  "nextScene": 3
-		  },
-		  "2": {
-			  "text": "----",
-			  "nextScene": 3
-			}
+        "1": {
+          "text": "I’m ok mom..It doesn’t hurt that bad..",
+          "nextScene": 5
+        },
+        "2": {
+          "text": "you don’t have to worry Mom, Im fine..",
+          "nextScene": 5
         }
-	  }
+      }
+    },
+    "5": {
+      "_comment": "Part of Scene 1",
+      "text": "You should eat breakfast! And..Oh My! You're already late! I haven’t noticed the time!",
+      "character": "Mother",
+      "char_img": "images/characters/mother_smile.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 6
+        }
+      }
+    },
+    "6": {
+      "_comment": "Part of Scene 1",
+      "text": "It’s already 9:15am in the morning! Your class started at 7:30am!",
+      "character": "Mother",
+      "char_img": "images/characters/mother_argue.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 7
+        }
+      }
+    },
+    "7": {
+      "_comment": "Part of Scene 1",
+      "text": "You should hurry or else you're going to get expelled! This is already the last warning from your principal, he’s not happy with how you acted!",
+      "character": "Mother",
+      "char_img": "images/characters/mother_eugh.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Ok..I will..Thanks Mom..",
+          "nextScene": 8
+        },
+        "2": {
+          "text": "Whatever, Mom…",
+          "nextScene": 9
+        }
+      }
+    },
+    "8": {
+      "_comment": "Part of Scene 1, Response to #7",
+      "text": "I went down to eat my breakfast and head out to school",
+      "char_img": "images/characters/mother_smile.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 10
+        }
+      }
+    },
+    "9": {
+      "_comment": "Part of Scene 1, Response to #7",
+      "text": "I went down to eat my breakfast and head out to school",
+      "char_img": "images/characters/mother_slight_mad.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 10
+        }
+      }
+    },
+    "10": {
+      "_comment": "Part of Scene 2",
+      "text": "I finally arrived at school",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 11
+        }
+      }
+    },
+    "11": {
+      "_comment": "Part of Scene 2",
+      "text": "I rushed to the classroom just to find my teacher waiting for me",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 12
+        }
+      }
+    },
+    "12": {
+      "_comment": "Part of Scene 2",
+      "text": "Good Morning (Name of MC), It’s nice to see you late again",
+      "character": "Teacher",
+      "char_img": "images/characters/teacher.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "Good morning Ma’am..",
+          "nextScene": 13
+        }
+      }
+    },
+    "13": {
+      "_comment": "Part of Scene 2",
+      "text": "How are your scars from last week?",
+      "character": "Teacher",
+      "char_img": "images/characters/teacher.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "It’s healing..But it doesn't matter",
+          "nextScene": 14
+        },
+        "2": {
+          "text": "That’s none of your business..",
+          "nextScene": 14
+        }
+      }
+    },
+      "14": {
+        "_comment": "Part of Scene 2",
+        "text": "No, but this is your last warning for being late in MY class",
+        "character": "Teacher",
+        "char_img": "images/characters/teacher_mad.png",
+        "bg_img": "images/school_classroom.png",
+        "options": {
+          "1": {
+            "text": "...",
+            "nextScene": 15
+          }
+        }
+      },
+      "15": {
+        "_comment": "Part of Scene 2",
+        "text": "I’m going to send a letter to your mom, I can’t let you pass in my class if your always late with everything",
+        "character": "Teacher",
+        "char_img": "images/characters/teacher_argue.png",
+        "bg_img": "images/school_classroom.png",
+        "options": {
+          "1": {
+            "text": "Continue",
+            "nextScene": 16
+          }
+        }
+      },
+    "16": {
+      "_comment": "Part of Scene 2",
+      "text": "The ones who fought you last week were expelled, your injuries are one thing but you being late is another thing",
+      "character": "Teacher",
+      "char_img": "images/characters/teacher_doubt.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 17
+        }
+      }
+    },
+    "17": {
+      "_comment": "Part of Scene 2",
+      "text": "I’m sorry, but I’m going to have you sent first to detention and be absent for today.",
+      "character": "Teacher",
+      "char_img": "images/characters/teacher_argue.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": " ...Fine.",
+          "nextScene": 18
+        }
+      }
+    },
+    "18": {
+      "_comment": "Part of Scene 3",
+      "text": "I'm about to head for detention today",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": "Continue walking",
+          "nextScene": 19
+        }
+      }
+    },
+    "19": {
+      "_comment": "Part of Scene 3",
+      "text": "While passing by, I can hear a crying child",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": " ...",
+          "nextScene": 20
+        }
+      }
+    },
+    "20": {
+      "_comment": "Part of Scene 3",
+      "text": "Knowing this school, there’s no kids here, just us high schoolers",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": " ...",
+          "nextScene": 21
+        }
+      }
+    },
+    "21": {
+      "_comment": "Part of Scene 3",
+      "text": "Maybe it’s just me…Anyway, I made it to the Detention Room",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 22
+        }
+      }
+    }
   }
 }
+

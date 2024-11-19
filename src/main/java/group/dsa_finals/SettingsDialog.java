@@ -39,7 +39,7 @@ public class SettingsDialog extends JDialog
 
         // text speed slider
         JLabel textSpeedLabel = new JLabel("Text Speed");
-        _textSpeedSlider = new JSlider(10,200,50);
+        _textSpeedSlider = new JSlider(0,200,50);
         //_textSpeedSlider.setMajorTickSpacing(90);
         _textSpeedSlider.setPaintTicks(true);
         _textSpeedSlider.setPaintLabels(true);
@@ -82,14 +82,14 @@ public class SettingsDialog extends JDialog
     private void LoadSettings()
     {
         var fileManager = new FileManager(this, _sceneManager);
-        int textSpeed = 210 - fileManager.GetTextSpeed();
+        int textSpeed = 200 - fileManager.GetTextSpeed();
         _sceneManager.textSpeed = textSpeed;
         _textSpeedSlider.setValue(textSpeed);
     }
 
     public void SaveSettings()
     {
-        int textSpeed = 210 - _textSpeedSlider.getValue();
+        int textSpeed = 200 - _textSpeedSlider.getValue();
         _sceneManager.textSpeed = textSpeed;
         var fileManager = new FileManager(this, _sceneManager);
         fileManager.SaveSettings(textSpeed);

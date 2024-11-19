@@ -24,6 +24,8 @@ import javax.imageio.ImageIO;
 public class SceneManager
 {
     public JFrame frame;
+    private BackgroundPanel _backgroundPanel;
+    private Image _backgroundImage, _characterImage;
     private JLabel _imageLabel, _dialogueCharacterLabel;
     private JTextArea _textArea;
     private JButton _option1Button, _option2Button;
@@ -123,7 +125,7 @@ public class SceneManager
         _typingThread.start(); //start the thread we created
 
         //Load and set image
-        try
+       try
         {
             //Load and set image
             String imagePath = sceneNode.get("image").asText(); //Get from JSON yung image file path sa current scene
@@ -152,6 +154,43 @@ public class SceneManager
         {
             System.out.println("Error: " + e);
         }
+
+
+       //LOAD Background image for scene
+        try
+        {
+            String imagePath = sceneNode.get("bg_img").asText(); // Get image path from JSON
+            _backgroundImage = new ImageIcon(imagePath).getImage();
+            imagePath = sceneNode.get("char_img").asText();
+            if (imagePath != null)
+            {
+                _characterImage = new ImageIcon(imagePath).getImage();
+            }
+            else
+            {
+                _characterImage = null;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error: " + e);
+        }
+
+        try
+        {
+            String imagePath = sceneNode.get("char_img").asText();
+            _characterImage = new ImageIcon(imagePath).getImage();
+        }
+        catch (Exception e)
+        {
+            _characterImage = null; //set null yung char image if null
+            System.out.println("Error: " + e);
+        }
+
+
+        _backgroundPanel.revalidate();
+        _backgroundPanel.repaint();
+
 
     }
 
@@ -237,7 +276,59 @@ public class SceneManager
         }
         
     }
-    
+
+    class BackgroundPanel extends JPanel
+    {
+        private Image backgroundImage;
+
+        public BackgroundPanel(String imagePath)
+        {
+            setOpaque(false);
+            try
+            {
+                // Load the image
+                File imgFile = new File(imagePath);
+                if (imgFile.exists())
+                {
+                    BufferedImage originalImage = ImageIO.read(imgFile);
+                    // Scale the image to fit the panel size
+                    int targetWidth = 1280;
+                    int targetHeight = 530;
+                    backgroundImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_SMOOTH);
+                }
+                else
+                {
+                    backgroundImage = null; // No image if the file doesn't exist
+                }
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+                backgroundImage = null;
+            }
+        }
+
+        @Override
+        protected void paintComponent(Graphics g)
+        {
+            super.paintComponent(g);  //Call the parent method for proper rendering
+            if (_backgroundImage != null)
+            {
+                //Draw the image onto the panel
+
+                g.drawImage(_backgroundImage, 0, 0, getWidth(), getHeight(), this);
+                if (_characterImage != null)
+                {
+                    g.drawImage(_characterImage, 0, 0, getWidth(), getHeight(), this);
+                }
+
+            }
+        }
+    }
+
+
+
+
     private void DrawGUIComponents()
     {
         frame = new JFrame("Visual Novel");
@@ -249,11 +340,14 @@ public class SceneManager
         frame.setFocusable(true);
         frame.requestFocusInWindow();
 
-        //Image panel
-        _imageLabel = new JLabel();
-        _imageLabel.setHorizontalAlignment(JLabel.CENTER);
-        _imageLabel.setFocusable(false);
-        frame.add(_imageLabel, BorderLayout.NORTH);//Add to frame
+        _backgroundPanel = new BackgroundPanel("images/scene_1");
+        _backgroundPanel.setOpaque(false);
+        _backgroundPanel.setLayout(new BoxLayout(_backgroundPanel, BoxLayout.Y_AXIS));
+        _backgroundPanel.setFocusable(false);
+
+        frame.add(_backgroundPanel, BorderLayout.CENTER);
+
+
 
         //text panel to put text area (dialogue text)
         _textPanel = new JPanel();
@@ -342,11 +436,10 @@ public class SceneManager
         dialoguePanel.setBackground(Color.DARK_GRAY);
 
 
-        frame.add(_imageLabel, BorderLayout.NORTH);
+        //frame.add(_imageLabel, BorderLayout.NORTH);
         frame.add(dialoguePanel, BorderLayout.SOUTH);
 
         _dialogueCharacterLabel.setFocusable(false);
-        _imageLabel.setFocusable(false);
         _textPanel.setFocusable(false);
         _textArea.setFocusable(false);
         _option1Button.setFocusable(false);
@@ -388,6 +481,8 @@ public class SceneManager
             }
         });
 
+        frame.revalidate();
+        frame.repaint();
     }
     
     
