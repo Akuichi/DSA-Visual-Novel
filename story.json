@@ -4,8 +4,7 @@
     "0": {
       "_comment": "Part of Scene 1",
       "text": "*You still hear the voices*",
-      "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "Continue",
@@ -17,7 +16,7 @@
       "_comment": "Part of Scene 1",
       "text": "“...It’s your fault they died…”“...I’m doing this for you…” “...I’ll protect you…” “...They did this to you…”",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "Continue",
@@ -1253,7 +1252,7 @@
       "_comment": "Part of Scene 4 if choice 1 was chosen",
       "text":"'That's only the start of what happened'",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "...",
@@ -1265,7 +1264,7 @@
       "_comment": "Part of Scene 4 if choice 1 was chosen",
       "text":"'Do you really wish to continue this?'",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "...",
@@ -1277,7 +1276,7 @@
       "_comment": "Part of Scene 4 if choice 1 was chosen",
       "text":"'It's not your fault..'",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "...",
@@ -1289,7 +1288,7 @@
       "_comment": "Part of Scene 4 if choice 1 was chosen",
       "text":"'I'll be here..'",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "...",
@@ -1301,7 +1300,7 @@
       "_comment": "Part of Scene 4 if choice 1 was chosen",
       "text":"'I'll protect you..'",
       "character": "???",
-      "bg_img": "images/scene_0.png",
+      "bg_img": "images/unknown.gif",
       "options": {
         "1": {
           "text": "...",

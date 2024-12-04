@@ -401,10 +401,1097 @@
           "nextScene": 30
         }
       }
+    },
+
+    "30": {
+      "_comment": "Part of Scene 2",
+      "text": "*robber bumps into mc*",
+      "bg_img": "images/",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 31
+        }
+      }
+    },
+
+    "31": {
+      "_comment": "Part of Scene 2",
+      "text": "WATCH IT YOU CUNT!",
+      "character": "Robber",
+      "char_img": "images/characters/ROBBER/",
+      "bg_img": "images/",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 32
+        }
+      }
+    },
+
+    "32": {
+      "_comment": "Part of Scene 2",
+      "text": "*My wallet and locked necklace fell after being bumped by the robber*",
+      "char_img": "images/characters/ROBBER/",
+      "bg_img": "images/",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 33
+        }
+      }
+    },
+
+    "33": {
+      "_comment": "Part of Scene 2",
+      "text": "*mumbles* I'M TAKING YOUR WALLET AND NECKLACE BECAUSE OF THAT!",
+      "character": "Robber",
+      "char_img": "images/characters/ROBBER/",
+      "bg_img": "images/",
+      "options": {
+        "1": {
+          "text": "???",
+          "nextScene": 34
+        }
+      }
+    },
+
+    "34": {
+      "_comment": "Part of Scene 2",
+      "text": "Let me take his life for you…",
+      "character": "???",
+      "char_img": "images/characters/ROBBER/",
+      "bg_img": "images/",
+      "options": {
+        "1": {
+          "text": "Give up your valuables",
+          "nextScene": 35
+        },
+        "2": {
+          "text": "???",
+          "nextScene": 53
+        }
+      }
+    },
+
+    "35": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_35.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 36
+        }
+      }
+    },
+
+    "36": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_36.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 37
+        }
+      }
+    },
+
+    "37": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "Do you realize how weak you are?",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 38
+        }
+      }
+    },
+
+    "38": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "That necklace meant everything to you… Do you not care for whom you lost that day?",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 39
+        }
+      }
+    },
+
+    "39": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_39.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 40
+        }
+      }
+    },
+
+    "40": {
+      "_comment": "Part of Scene 2 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_40.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 41
+        }
+      }
+    },
+
+    "41": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_41.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 42
+        }
+      }
+    },
+
+    "42": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "Bro, did you see the news? Apparently there's a robber going around stealing people’s money…",
+      "character": "Friend 1",
+      "char_img": "images/characters/Friend1/angry.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 43
+        }
+      }
+    },
+
+    "43": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "Lucky me, I was his contestant in his little game earlier…",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_mad smile.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 44
+        }
+      }
+    },
+
+    "44": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "Sheesh, that’s tough… We’re sorry to hear that, (MC’s name)…",
+      "character": "Friend 2",
+      "char_img": "images/characters/Friend2/surprised.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 45
+        }
+      }
+    },
+
+    "45": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "That was all the money my mother gave me for the entire week…",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 46
+        }
+      }
+    },
+
+    "46": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "I’ve been having trouble sleeping too. I get constant headaches and it feels like my brain is about to bleed…",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 47
+        }
+      }
+    },
+
+    "47": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "Even if I do get sleep, I’m having these weird dreams or nightmares that occur every single time. I can’t tell when was the last time I had a normal good night's sleep…",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 48
+        }
+      }
+    },
+
+    "48": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "I’m sorry to hear that, man. I know that you’re going through tough times but try to take it easy, aight? I'm sure that’s the worst that could happen to you.",
+      "character": "Friend 1",
+      "char_img": "images/characters/Friend1/relaxed.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 49
+        }
+      }
+    },
+
+    "49": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "Yeah, everything happens for a reason. You just have to take One Step At a Time",
+      "character": "Friend 2",
+      "char_img": "images/characters/Friend2/smile.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 50
+        }
+      }
+    },
+
+    "50": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_50.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 51
+        }
+      }
+    },
+
+    "51": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE",
+      "text": "It was nice meeting you, (MC’s name)! We look forward to seeing you again tomorrow!",
+      "character": "Friends 1 and 2",
+      "char_img": "images/characters/f1f2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Bye! See you tomorrow!",
+          "nextScene": 52
+        },
+        "2": {
+          "text": "Night.",
+          "nextScene": 52
+        }
+      }
+    },
+
+    "52": {
+      "_comment": "Part of Scene 3 ROBBED ROUTE END Lead into Scene 4 Robbed Route",
+      "text": "",
+      "bg_img": "images/chapter2/scene_52.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 86
+        }
+      }
+    },
+
+
+    "53": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "I couldn’t do anything…",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 54
+        }
+      }
+    },
+
+    "54": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "*You froze from the heat of the moment, and passed out*",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 55
+        }
+      }
+    },
+
+    "55": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "Hahahahaha…",
+      "character": "???",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 56
+        }
+      }
+    },
+
+    "56": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "You still had a bit of consciousness left, but you could hear someone laughing while you run out of breath",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 57
+        }
+      }
+    },
+
+    "57": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "You also hear a man screaming in pain. Like nothing you’ve ever heard before",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 58
+        }
+      }
+    },
+
+    "58": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "AAAAAAAAAAAAAAAAAAARRRRRRHHHHHHHHHH!!!",
+      "character": "Robber",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 59
+        }
+      }
+    },
+
+    "59": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "STOP! PLEASE! I GIVE UP!....I'm sorry...Please...",
+      "character": "Robber",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 60
+        }
+      }
+    },
+
+    "60": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_60.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 61
+        }
+      }
+    },
+
+    "61": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAWWWWWWWWWW!!!",
+      "character": "Robber",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 62
+        }
+      }
+    },
+
+    "62": {
+      "_comment": "Part of Scene 2 ??? ROUTE",
+      "text": "It is done.",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 63
+        }
+      }
+    },
+
+    "63": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_63.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 64
+        }
+      }
+    },
+
+    "64": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Hey, man? You ok? It’s like you passed out the moment you sat down with us hehe",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/normal.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 65
+        }
+      }
+    },
+
+    "65": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "You look exhausted! How are you feeling??",
+      "character": "Friend 2",
+      "char_img": "images/characters/friend2/surprised.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "slight groan... Who are you?",
+          "nextScene": 66
+        },
+        "2": {
+          "text": "slight groan...I'm sorry..who's this?",
+          "nextScene": 66
+        }
+      }
+    },
+
+    "66": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Haaaaa?!",
+      "character": "Friends 1 and 2",
+      "char_img": "images/characters/f1f2_angry.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 67
+        }
+      }
+    },
+
+    "67": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Are you Dory from Finding Nemo or something? You made friends with us this morning, silly hahaha",
+      "character": "Friend 2",
+      "char_img": "images/characters/friend2/laugh.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 68
+        }
+      }
+    },
+
+    "68": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "LOL yeah! What a menacing introduction you made to the class earlier hehe… Seems like the ladies found someone to fight over on the first day… dang…",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/happy.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 69
+        }
+      }
+    },
+
+    "69": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "*I’m too exhausted to ask more questions, so I just went with it and accepted these 2 as friends. They seem trustworthy anyway*",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 70
+        }
+      }
+    },
+
+    "70": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Uhh thanks? Sorry, I’ve been having a weird, hard life lately…",
+      "char_img": "images/characters/mc/5_sad smile.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 71
+        }
+      }
+    },
+
+    "71": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Don’t sweat it, man hehe. That’s the average college student experience",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/relaxed.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 72
+        }
+      }
+    },
+
+    "72": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "and- WOAAAHHH!!!",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/angry.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 73
+        }
+      }
+    },
+
+    "73": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Friend 1 was cut off by what he saw on his phone",
+      "char_img": "images/characters/friend1/happy.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 74
+        }
+      }
+    },
+
+    "74": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "That wanted Robber who’s been stealing people’s cash has finally been caught! Sheesh… that’s gotta hurt…",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/happy.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 75
+        }
+      }
+    },
+
+    "75": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Yeeouch! The news says his leg is broken. Snapped even…",
+      "character": "Friend 2",
+      "char_img": "images/characters/friend2/surprised.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 76
+        }
+      }
+    },
+
+    "76": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_76.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 77
+        }
+      }
+    },
+
+    "77": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "I’m sorry about this. I’m just not in the best state. What makes this worse is that it’s the first day of college…",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 78
+        }
+      }
+    },
+
+    "78": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "I’ve been having trouble sleeping too. I get constant headaches and it feels like my brain is about to bleed…",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 79
+        }
+      }
+    },
+
+    "79": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Even if I do get sleep, I’m having these weird dreams or nightmares that occur every single time. I can’t tell when was the last time I had a normal good night's sleep…",
+      "char_img": "images/characters/MC/5_giveup.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 80
+        }
+      }
+    },
+
+    "80": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "I’m sorry to hear that, man. I know that you’re going through tough times but try to take it easy, aight? I'm sure that’s the worst that could happen to you.",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/relaxed.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 81
+        }
+      }
+    },
+
+    "81": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Yeah, everything happens for a reason. You just have to take One Step At a Time",
+      "character": "Friend 2",
+      "char_img": "images/characters/Friend2/smile.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 82
+        }
+      }
+    },
+
+    "82": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "",
+      "bg_img": "images/chapter2/scene_82.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 83
+        }
+      }
+    },
+
+    "83": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "It was nice meeting you, (MC’s name)! We look forward to seeing you again tomorrow!",
+      "character": "Friends 1 and 2",
+      "char_img": "images/characters/f1f2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 84
+        }
+      }
+    },
+
+    "84": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "Break a leg on the homework, aight?",
+      "character": "Friend 1",
+      "char_img": "images/characters/friend1/happy.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 85
+        }
+      }
+    },
+
+    "85": {
+      "_comment": "Part of Scene 3 ??? ROUTE",
+      "text": "………",
+      "character": "Friend 2 and MC",
+      "char_img": "images/characters/mc/5_giveup.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Bye! See you tomorrow!",
+          "nextScene": 99
+        },
+        "2": {
+          "text": "Night.",
+          "nextScene": 99
+        }
+      }
+    },
+
+    "86": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "I got home but I lost the one thing that meant more than what I live for",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 87
+        }
+      }
+    },
+
+    "87": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "I couldn't do anything, I was afraid, I didn't know what to do… What would mom say if she saw me now…",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 88
+        }
+      }
+    },
+
+    "88": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "And dad…",
+      "char_img": "images/characters/mc/5_normal.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 89
+        }
+      }
+    },
+
+    "89": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "...",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 90
+        }
+      }
+    },
+
+    "90": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "It's been a day, I might just drink to forget about it",
+      "char_img": "images/characters/mc/5_sad smile.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 91
+        }
+      }
+    },
+
+    "91": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "...I don't know what to do anymore...",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 92
+        }
+      }
+    },
+
+    "92": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "I lost it all...",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 93
+        }
+      }
+    },
+
+    "93": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "The money I saved up to meet with mom someday, my allowance, my locket....",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 94
+        }
+      }
+    },
+
+    "94": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "....",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 95
+        }
+      }
+    },
+
+    "95": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "I guess there's nothing else now that I can be reminded of for what I live for....",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 96
+        }
+      }
+    },
+
+    "96": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "*You drink directly from a bottle of wine*",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 97
+        }
+      }
+    },
+
+    "97": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE",
+      "text": "...uggghh...",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 98
+        }
+      }
+    },
+
+    "98": {
+      "_comment": "Part of Scene 4 ROBBED ROUTE END Lead into Chapter 3",
+      "text": "...I don't know if I'll have enough now to pay for my next visit....",
+      "char_img": "images/characters/mc/5_sad2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "[Go to your room]",
+          "nextChapter": 3
+        },
+        "2": {
+          "text": "[Throw bottle at the wall]",
+          "nextChapter": 3
+        }
+      }
+    },
+
+    "99": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "I got home safely, at least I think I did",
+      "char_img": "images/characters/mc/5_normal.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 100
+        }
+      }
+    },
+
+    "100": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "I'm glad I was able to do something for once",
+      "char_img": "images/characters/mc/5_aha.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 101
+        }
+      }
+    },
+
+    "101": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "But for some reason..I didn't feel like it was me",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 102
+        }
+      }
+    },
+
+    "102": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "I turn on the TV. To my surprise, I see myself on the news",
+      "char_img": "images/characters/mc/5_disagree2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 103
+        }
+      }
+    },
+
+    "103": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "A daring robbery attempt was thwarted in a way that few would expect—by a young man who, in a sudden and unexpected move, managed to stop the thief in his tracks by snapping his leg.",
+      "character": "News Reporter",
+      "char_img": "images/characters/mc/5_disagree2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 104
+        }
+      }
+    },
+
+    "104": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "Authorities were quick to respond, arriving on the scene just minutes after the incident. The robber, who is now in police custody, was rushed to the hospital with severe leg injuries",
+      "character": "News Reporter",
+      "char_img": "images/characters/mc/5_disagree2.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 105
+        }
+      }
+    },
+
+    "105": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "WHAT??!",
+      "char_img": "images/characters/mc/5_mad smile.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 106
+        }
+      }
+    },
+
+    "106": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "I don't know how I did that",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 107
+        }
+      }
+    },
+
+    "107": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "Was I really me that did that? Or was it just my imagination again?",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 108
+        }
+      }
+    },
+
+    "108": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "This is just like what happened back in high school…",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 109
+        }
+      }
+    },
+
+    "109": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "!!!",
+      "char_img": "images/characters/mc/5_mad smile.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 110
+        }
+      }
+    },
+
+    "110": {
+      "_comment": "Part of Scene 4 ??? ROUTE",
+      "text": "Was that really me who did that to that robber? Even so… that would just be self-defense, right?",
+      "char_img": "images/characters/mc/5_mad smile.png",
+      "bg_img": "images/living_room_night.jpg",
+      "options": {
+        "1": {
+          "text": "[Go to your room]",
+          "nextChapter": 3
+        },
+        "2": {
+          "text": "I think I need to get some rest after today…",
+          "nextChapter": 3
+        }
+      }
     }
-
-
-
 
 
 
