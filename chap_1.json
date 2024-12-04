@@ -290,7 +290,7 @@
       "_comment": "Part of Scene 3",
       "text":"Welcome back, (MC). I see this was your last warning.",
       "character": "Teacher-Assigned",
-      "char_img": "#",
+      "char_img": "images/characters/teacher/teacher.png",
       "bg_img": "images/school_detention.png",
       "options": {
         "1": {
@@ -315,7 +315,7 @@
       "_comment": "Part of Scene 3",
       "text":"Take your seat beside (Friend 1)",
       "character": "Teacher-Assigned",
-      "char_img": "images/characters/FRIEND/friend_confident.png",
+      "char_img": "images/characters/teacher/teacher_cmon.png",
       "bg_img": "images/school_detention.png",
       "options": {
         "1": {
@@ -327,7 +327,7 @@
     "25": {
       "_comment": "Part of Scene 3",
       "text":"Hi...",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_normal.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -340,7 +340,7 @@
     "26": {
       "_comment": "Part of Scene 3",
       "text":"So, you're back again..",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_mad.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -353,7 +353,7 @@
     "27": {
       "_comment": "Part of Scene 3",
       "text":"Last warning?",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_thinking.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -366,7 +366,7 @@
     "28": {
       "_comment": "Part of Scene 3",
       "text":"I get it.. I'm sorry",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_thinking.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -379,7 +379,7 @@
     "29": {
       "_comment": "Part of Scene 3",
       "text":"Wanna have lunch later?",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_normal.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -392,7 +392,6 @@
     "30": {
       "_comment": "Scene 4",
       "text":"*The lunch bell rang. The teacher-assigned let us have our lunch*",
-      "character": "FRIEND",
       "char_img": "images/characters/FRIEND/friend_normal.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -405,7 +404,6 @@
     "31": {
       "_comment": "Part of Scene 4",
       "text":"*My Friend and I went to get our lunch at the cafeteria*",
-      "character": "FRIEND",
       "char_img": "images/characters/FRIEND/friend_normal.png",
       "bg_img": "images/school_detention.png",
       "options": {
@@ -430,7 +428,7 @@
     "33": {
       "_comment": "Part of Scene 4",
       "text":"Eh.. Better to have something than nothing",
-      "character": "FRIEND",
+      "character": "Friend",
       "char_img": "images/characters/FRIEND/friend_thinking.png",
       "bg_img": "images/school_canteen.png",
       "options": {
