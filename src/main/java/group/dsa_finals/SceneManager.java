@@ -381,12 +381,12 @@ public class SceneManager
         _option1Button.setMargin(new Insets(0, 0, 0, 0));
         _option2Button.setMargin(new Insets(0, 0, 0, 0));        
         
-        Color buttonBackgroundColor = Color.DARK_GRAY;
+        Color buttonBackgroundColor = Color.WHITE;
         _option1Button.setBackground(buttonBackgroundColor);
         _option2Button.setBackground(buttonBackgroundColor);
        
-        _option1Button.setForeground(Color.WHITE);
-        _option2Button.setForeground(Color.WHITE);
+        _option1Button.setForeground(Color.BLACK);
+        _option2Button.setForeground(Color.BLACK);
 
         //Remove button border
         _option1Button.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));

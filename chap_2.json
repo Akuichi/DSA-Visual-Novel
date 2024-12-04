@@ -405,7 +405,7 @@
 
     "30": {
       "_comment": "Part of Scene 2",
-      "text": "*robber bumps into mc*",
+      "text": "*someone bumps into you*",
       "bg_img": "images/",
       "options": {
         "1": {
@@ -605,7 +605,6 @@
     "45": {
       "_comment": "Part of Scene 3 ROBBED ROUTE",
       "text": "That was all the money my mother gave me for the entire week…",
-      "character": "MC",
       "char_img": "images/characters/MC/5_sad2.png",
       "bg_img": "images/school_canteen.png",
       "options": {
@@ -619,7 +618,6 @@
     "46": {
       "_comment": "Part of Scene 3 ROBBED ROUTE",
       "text": "I’ve been having trouble sleeping too. I get constant headaches and it feels like my brain is about to bleed…",
-      "character": "MC",
       "char_img": "images/characters/MC/5_sad2.png",
       "bg_img": "images/school_canteen.png",
       "options": {
@@ -633,7 +631,6 @@
     "47": {
       "_comment": "Part of Scene 3 ROBBED ROUTE",
       "text": "Even if I do get sleep, I’m having these weird dreams or nightmares that occur every single time. I can’t tell when was the last time I had a normal good night's sleep…",
-      "character": "MC",
       "char_img": "images/characters/MC/5_deep.png",
       "bg_img": "images/school_canteen.png",
       "options": {
@@ -982,7 +979,7 @@
 
     "73": {
       "_comment": "Part of Scene 3 ??? ROUTE",
-      "text": "Friend 1 was cut off by what he saw on his phone",
+      "text": "*Friend 1 was cut off by what he saw on his phone*",
       "char_img": "images/characters/friend1/happy.png",
       "bg_img": "images/school_canteen.png",
       "options": {
@@ -1372,7 +1369,7 @@
 
     "102": {
       "_comment": "Part of Scene 4 ??? ROUTE",
-      "text": "I turn on the TV. To my surprise, I see myself on the news",
+      "text": "*I turned the TV on* To my surprise, I see myself on the news",
       "char_img": "images/characters/mc/5_disagree2.png",
       "bg_img": "images/living_room_night.jpg",
       "options": {
@@ -1439,7 +1436,7 @@
 
     "107": {
       "_comment": "Part of Scene 4 ??? ROUTE",
-      "text": "Was I really me that did that? Or was it just my imagination again?",
+      "text": "Was that really me?? Did I do that? Or was it just my imagination again?",
       "char_img": "images/characters/mc/5_deep.png",
       "bg_img": "images/living_room_night.jpg",
       "options": {

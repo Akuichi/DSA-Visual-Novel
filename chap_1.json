@@ -105,12 +105,10 @@
       "options": {
         "1": {
           "text": "Ok..I will..Thanks Mom..",
-          "char_img": "images/character/MOTHER/mother_smile.png",
           "nextScene": 8
         },
         "2": {
           "text": "Whatever, Mom…",
-          "char_img": "images/character/MOTHER/mother_slight_mad.png",
           "nextScene": 9
         }
       }
@@ -118,7 +116,7 @@
     "8": {
       "_comment": "Part of Scene 1, Response to #7",
       "text": "*I went down to eat my breakfast and head out to school*",
-      "char_img": "images/characters/MC/5_normal.png",
+      "char_img": "images/character/MOTHER/mother_smile.png",
       "bg_img": "images/bedroom_day.png",
       "options": {
         "1": {
@@ -130,7 +128,7 @@
     "9": {
       "_comment": "Part of Scene 1, Response to #7",
       "text": "*I went down to eat my breakfast and head out to school*",
-      "char_img": "images/characters/MC/5_disagree.png",
+      "char_img": "images/character/MOTHER/mother_slight_mad.png",
       "bg_img": "images/bedroom_day.png",
       "options": {
         "1": {
@@ -203,7 +201,7 @@
       },
       "15": {
         "_comment": "Part of Scene 2",
-        "text": "I’m going to send a letter to your mom, I can’t let you pass in my class if your always late with everything",
+        "text": "I’m going to send a letter to your mom, I can’t let you pass in my class if you're always late with everything",
         "character": "Teacher",
       "char_img": "images/characters/TEACHER/teacher_talking.png",
         "bg_img": "images/school_classroom.png",
@@ -304,7 +302,7 @@
     "23": {
       "_comment": "Part of Scene 3",
       "text":"Hello again…",
-      "char_img": "#",
+      "char_img": "5_sad smile.png",
       "bg_img": "images/school_detention.png",
       "options": {
         "1": {
@@ -406,7 +404,7 @@
     },
     "31": {
       "_comment": "Part of Scene 4",
-      "text":"*My Friend and I went to get our lunch in the cafeteria*",
+      "text":"*My Friend and I went to get our lunch at the cafeteria*",
       "character": "FRIEND",
       "char_img": "images/characters/FRIEND/friend_normal.png",
       "bg_img": "images/school_detention.png",
@@ -431,7 +429,7 @@
     },   
     "33": {
       "_comment": "Part of Scene 4",
-      "text":"Eh.. Better have something than nothing",
+      "text":"Eh.. Better to have something than nothing",
       "character": "FRIEND",
       "char_img": "images/characters/FRIEND/friend_thinking.png",
       "bg_img": "images/school_canteen.png",
@@ -596,7 +594,6 @@
    "46": {
       "_comment": "Part of Scene 4",
       "text":"Uhh.. What happened?",
-      "character": "MC",
       "char_img": "images/characters/MC/5_sad2.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -609,7 +606,6 @@
   "47": {
       "_comment": "Part of Scene 4",
       "text":"Wait.. Why am I back home?",
-      "character": "MC",
       "char_img": "images/characters/MC/5_thinking.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -664,7 +660,7 @@
     },
   "51": {
       "_comment": "Part of Scene 4",
-      "text":"Your Teacher told me that you broke his jaw!",
+      "text":"Your Teacher told me that you broke your schoolmate's jaw!",
       "character": "Mom",
       "char_img": "images/characters/MOTHER/mother_argue.png",
       "bg_img": "images/bedroom_night.png",
@@ -743,7 +739,6 @@
   "57": {
       "_comment": "Part of Scene 4",
       "text":"I-I really don't know what happened.. I don't even remember beating someone up..",
-      "character": "MC",
       "char_img": "images/characters/MC/5_thinking.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -755,8 +750,7 @@
     },   
   "58": {
       "_comment": "Part of Scene 4",
-      "text":"*phone rings*",
-      "character": "Mom",
+      "text":"*Mom's phone started ringing*",
       "char_img": "images/characters/MOTHER/mother_talk.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -806,7 +800,6 @@
   "62": {
       "_comment": "Part of Scene 4",
       "text":"What happened..",
-      "character": "MC",
       "char_img": "images/characters/MC/5_thinking.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -819,7 +812,6 @@
   "63": {
       "_comment": "Part of Scene 4",
       "text":"I just blacked out.. but I don't remember beating someone up after..",
-      "character": "MC",
       "char_img": "images/characters/MC/5_deep.png",
       "bg_img": "images/bedroom_night.png",
       "options": {
@@ -950,7 +942,7 @@
     },
   "73": {
       "_comment": "Part of Scene 4 if choice 1 was chosen",
-      "text":"'BECAUSE UNLIKE YOU, MY EX WAS GENTLEMAN THAN YOUR SORRY EXISTENCE'",
+      "text":"'BECAUSE UNLIKE YOU, MY EX WAS A GENTLEMAN UNLIKE YOUR SORRY EXISTENCE'",
       "character": "Mom",
       "char_img": "images/characters/MC/5_deep.png",
       "bg_img": "images/house_hallway.png",
@@ -976,7 +968,7 @@
     },     
   "75": {
       "_comment": "Part of Scene 4 if choice 1 was chosen",
-      "text":"'*sighs* Why did I even think that calling you was a good idea..'",
+      "text":"'*sighs* Why did I even think that answering your call was a good idea..'",
       "character": "Mom",
       "char_img": "images/characters/MC/5_normal.png",
       "bg_img": "images/house_hallway.png",
@@ -1157,7 +1149,7 @@
     },     
   "89": {
       "_comment": "Part of Scene 4 if choice 1 was chosen",
-      "text":"*goes back to your room*",
+      "text":"*you go back to your room*",
       "bg_img": "images/house_hallway.png",
       "options": {
         "1": {

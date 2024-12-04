@@ -13,7 +13,20 @@
         }
       }
     },
+
     "1": {
+      "_comment": "Disclaimer",
+      "text": "",
+      "bg_img": "images/disclaimer2.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 2
+        }
+      }
+    },
+
+    "2": {
       "_comment": "Chapter 1 Header",
       "text": "",
       "bg_img": "images/chapter1.png",

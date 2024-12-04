@@ -1,0 +1,21 @@
+{
+  "chapter": 3,
+  "scenes":
+  {
+    "0": {
+      "_comment": "Chapter 3 Header",
+      "text": "",
+      "bg_img": "images/chapter3.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    }
+
+
+
+  }
+}
+
