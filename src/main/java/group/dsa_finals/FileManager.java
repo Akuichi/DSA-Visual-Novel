@@ -3,6 +3,7 @@ import java.io.File;
 import javax.swing.*;
 import java.io.IOException;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class FileManager
@@ -45,10 +46,11 @@ public class FileManager
         }
 
         ObjectMapper mapper = new ObjectMapper();
-        // Save integer as JSON
+        SaveData saveData = new SaveData(_sceneManager.currentChapter, _sceneManager.currentScene); //make the save data to store sa json
+        // Save data as JSON
         try
         {
-            mapper.writeValue(new File(_saveFilePath), _sceneManager.currentScene);
+            mapper.writeValue(new File(_saveFilePath), saveData);
             JOptionPane.showMessageDialog(
                     null,
                     "Game saved successfully",
@@ -83,9 +85,34 @@ public class FileManager
             ObjectMapper mapper = new ObjectMapper();
             try
             {
-                _sceneManager.currentScene = mapper.readValue(new File(_saveFilePath), Integer.class); //update current scene from save
-                _parentDialog.dispose();
-                _sceneManager.DisplayScene();
+                JsonNode saveDataNode = mapper.readTree(new File(_saveFilePath));
+                if (saveDataNode.has("chapter") && saveDataNode.has("scene"))
+                {
+                    _sceneManager.currentChapter = saveDataNode.get("chapter").asInt();
+                    _sceneManager.currentScene = saveDataNode.get("scene").asInt();
+
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Game loaded successfully",
+                            "Load Successful",
+                            JOptionPane.INFORMATION_MESSAGE
+                    );
+                    _parentDialog.dispose();
+                    _sceneManager.LoadStoryData();
+                    _sceneManager.DisplayScene();
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Missing or corrupt save data",
+                            "Load Game Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                }
+
+
+
             }
             catch (IOException e)
             {
@@ -97,8 +124,29 @@ public class FileManager
             ObjectMapper mapper = new ObjectMapper();
             try
             {
-                int sceneToLoad = mapper.readValue(new File(_saveFilePath), Integer.class); //update current scene from save
-                new SceneManager(sceneToLoad);
+                JsonNode saveDataNode = mapper.readTree(new File(_saveFilePath));
+
+                if (saveDataNode.has("chapter") && saveDataNode.has("scene"))
+                {
+                    int chapterToLoad = saveDataNode.get("chapter").asInt();
+                    int sceneToLoad = saveDataNode.get("scene").asInt();
+                    new SceneManager(sceneToLoad,chapterToLoad);
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Game loaded successfully",
+                            "Load Successful",
+                            JOptionPane.INFORMATION_MESSAGE
+                    );
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Missing or corrupt save data",
+                            "Load Game Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                }
             }
             catch (IOException e)
             {
@@ -165,5 +213,19 @@ public class FileManager
             e.printStackTrace();
         }
     }
+
+
+    public static class SaveData
+    {
+        public int chapter;
+        public int scene;
+
+        public SaveData(int chapter, int scene)
+        {
+            this.chapter = chapter;
+            this.scene = scene;
+        }
+    }
+
 
 }

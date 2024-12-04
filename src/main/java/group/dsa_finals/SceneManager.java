@@ -34,11 +34,14 @@ public class SceneManager
     private Thread _typingThread;
     private final SceneManager _sceneManager;
     public int textSpeed;
-    public int currentScene;
+    public int currentScene, currentChapter;
 
-    public SceneManager(int currentScene)
+    public SceneManager(int currentScene, int currentChapter)
     {
         _sceneManager = this;
+        //Save passed scene id as current scene
+        this.currentScene = currentScene;
+        this.currentChapter = currentChapter;
         //Load the story data from the JSON file
         LoadStoryData();
         
@@ -48,20 +51,19 @@ public class SceneManager
         var fileManager = new FileManager(null,this);
         textSpeed = fileManager.GetTextSpeed();
 
-        //Save passed scene id as current scene
-        this.currentScene = currentScene;
+
         DisplayScene();
 
 
         frame.setVisible(true);
     }
 
-    private void LoadStoryData()
+    public void LoadStoryData()
     { //Load lang yung JSON for our story data
         ObjectMapper mapper = new ObjectMapper(); //Object mapper is part of the Jackson Library na inimport para makapag interact sa JSON file
         try
         {
-            _storyData = mapper.readTree(new File("story.json")); //readTree, function to read a JSON file para ma read yung tree of JsonNodes,
+            _storyData = mapper.readTree(new File("chap_" + currentChapter + ".json")); //readTree, function to read a JSON file para ma read yung tree of JsonNodes,
                                                                  //Yung JsonNode naman is a representation ng isang element sa JSON tulad ng nasatin na option, scene number
                                                                  //Inistore natin yung data sa storyData variable so we can call it later pag magpapalit ng scenes
         }
@@ -84,15 +86,15 @@ public class SceneManager
             _option2Button.setVisible(false);
             return; //return, end method/function
         }
-        
-        var characterNode = sceneNode.get("character"); //store as variable yung character node sa JSON
-        if (characterNode == null) //Check if the character node exists sa current scene
-        { //if null ibig sabihin walang character speaking so set blank yung Label ng character name
-            _dialogueCharacterLabel.setText("");
-        }
-        else //else lagay name ng character sa label
+
+        if (sceneNode.has("character"))
         {
+            var characterNode = sceneNode.get("character"); //store as variable yung character node sa JSON
             _dialogueCharacterLabel.setText(characterNode.asText());
+        }
+        else
+        {
+            _dialogueCharacterLabel.setText("");
         }
 
         //Set scene text
@@ -124,47 +126,25 @@ public class SceneManager
         });
         _typingThread.start(); //start the thread we created
 
-        //Load and set image
-       try
-        {
-            //Load and set image
-            String imagePath = sceneNode.get("image").asText(); //Get from JSON yung image file path sa current scene
-            File imgFile = new File(imagePath); //Store as file
-            if (imgFile.exists())
-            { //Check kung may image file ba, if yes continue
-                BufferedImage originalImage = ImageIO.read(imgFile); //Convert to buffered image yung file
 
-                //Width and height ng image
-                int targetWidth = 1280;
-                int targetHeight = 530;
-
-                Image scaledImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_SMOOTH); //Scale the image as a new image
-                ImageIcon imageIcon = new ImageIcon(scaledImage); //Change it to as an image icon
-
-                _imageLabel.setIcon(imageIcon); //palitan icon ng jlabel para maging image na naka display
-                _imageLabel.setPreferredSize(new Dimension(targetWidth, targetHeight));
-            }
-            else //If walang image file, no image to load (set as null)
-            {
-                _imageLabel.setIcon(null);
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Error: " + e);
-        }
-
-
-       //LOAD Background image for scene
+       //LOAD Background image for scene and char image if meron
         try
         {
+
             String imagePath = sceneNode.get("bg_img").asText(); // Get image path from JSON
             _backgroundImage = new ImageIcon(imagePath).getImage();
-            imagePath = sceneNode.get("char_img").asText();
-            if (imagePath != null)
+
+            if (sceneNode.has("char_img"))
             {
-                _characterImage = new ImageIcon(imagePath).getImage();
+                imagePath = sceneNode.get("char_img").asText();
+                if (imagePath.isEmpty())
+                {
+                    _characterImage = null;
+                }
+                else
+                {
+                    _characterImage = new ImageIcon(imagePath).getImage();
+                }
             }
             else
             {
@@ -173,17 +153,6 @@ public class SceneManager
         }
         catch (Exception e)
         {
-            System.out.println("Error: " + e);
-        }
-
-        try
-        {
-            String imagePath = sceneNode.get("char_img").asText();
-            _characterImage = new ImageIcon(imagePath).getImage();
-        }
-        catch (Exception e)
-        {
-            _characterImage = null; //set null yung char image if null
             System.out.println("Error: " + e);
         }
 
@@ -248,10 +217,19 @@ public class SceneManager
     //Eto yung event na ginawa para sa dialogue choices button the (int option) here refers to the option number (1, 2) in our case sa ngayon
     private void HandleDialogueOption(int option)
     {
-            JsonNode optionsNode = _storyData.get("scenes").get(String.valueOf(currentScene)).get("options"); //Get from current scene yung options
+        JsonNode optionsNode = _storyData.get("scenes").get(String.valueOf(currentScene)).get("options"); //Get from current scene yung options
         if (optionsNode.has(String.valueOf(option))) //If may option (from int option, this is either 1 or 2) continue
         {
-            currentScene = optionsNode.get(String.valueOf(option)).get("nextScene").asInt(); //Store the next scene ID sa result ng option choice as int
+            JsonNode optionNode = optionsNode.get(String.valueOf(option));
+            if (optionNode.has("nextChapter")) //check if may chapter, if yes change chapters
+            {
+                currentChapter = optionNode.get("nextChapter").asInt();
+                currentScene = 0;
+                LoadStoryData();
+                DisplayScene();
+                return;
+            }
+            currentScene = optionNode.get("nextScene").asInt(); //Store the next scene ID sa result ng option choice as int
             DisplayScene(); //Display Scene kasi iba na yung currentScene
         }
         else

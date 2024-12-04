@@ -30,7 +30,7 @@ public class MainMenu extends JFrame
 
     private void NewGame()
     {
-        new SceneManager(0);
+        new SceneManager(0,0);
         dispose();
     }
 

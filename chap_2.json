@@ -1,0 +1,416 @@
+{
+  "chapter": 2,
+  "scenes":
+  {
+    "0": {
+      "_comment": "Chapter 2 Header",
+      "text": "",
+      "bg_img": "images/chapter2.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    },
+    "1": {
+      "_comment": "Part of Scene 1",
+      "text": "“...”",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 2
+        }
+      }
+    },
+    "2": {
+      "_comment": "Part of Scene 1",
+      "text": "“It’s time..”",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 3
+        }
+      }
+    },
+
+    "3": {
+      "_comment": "Part of Scene 1",
+      "text": "“It’s time to tell you the truth”",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 4
+        }
+      }
+    },
+
+    "4": {
+      "_comment": "Part of Scene 1",
+      "text": "“Let me show you…”",
+      "character": "???",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 5
+        }
+      }
+    },
+
+    "5": {
+      "_comment": "Part of Scene 1",
+      "text": "*alarm goes off*",
+      "character": "",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 6
+        }
+      }
+    },
+
+    "6": {
+      "_comment": "Part of Scene 1",
+      "text": "*you wake up*",
+      "character": "",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 7
+        }
+      }
+    },
+
+    "7": {
+      "_comment": "Part of Scene 1",
+      "text": "...",
+      "character": "",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 8
+        }
+      }
+    },
+
+    "8": {
+      "_comment": "Part of Scene 1",
+      "text": "What time is it?",
+      "character": "",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 9
+        }
+      }
+    },
+
+    "9": {
+      "_comment": "Part of Scene 1",
+      "text": "4:00 am?",
+      "character": "",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 10
+        }
+      }
+    },
+
+    "10": {
+      "_comment": "Part of Scene 1",
+      "text": "Weird… I don’t remember waking up this early…",
+      "character": "",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 11
+        }
+      }
+    },
+
+    "11": {
+      "_comment": "Part of Scene 1",
+      "text": "Oh… right… I’m not in high school anymore",
+      "character": "",
+      "char_img": "images/characters/MC/5_giveup.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 12
+        }
+      }
+    },
+
+    "12": {
+      "_comment": "Part of Scene 1",
+      "text": "And mom…",
+      "character": "",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 13
+        }
+      }
+    },
+
+    "13": {
+      "_comment": "Part of Scene 1",
+      "text": "…",
+      "character": "",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 14
+        }
+      }
+    },
+
+    "14": {
+      "_comment": "Part of Scene 1",
+      "text": "I should get ready",
+      "character": "",
+      "char_img": "images/characters/MC/5_giveup.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 15
+        }
+      }
+    },
+
+    "15": {
+      "_comment": "Part of Scene 1",
+      "text": "",
+      "character": "",
+      "char_img": "",
+      "bg_img": "images/chapter2/scene_15.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 16
+        }
+      }
+    },
+
+    "16": {
+      "_comment": "Part of Scene 1",
+      "text": "...",
+      "character": "",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 17
+        }
+      }
+    },
+
+    "17": {
+      "_comment": "Part of Scene 1",
+      "text": "I should write in my journal first…",
+      "character": "",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 18
+        }
+      }
+    },
+
+    "18": {
+      "_comment": "Part of Scene 1",
+      "text": "I forgot I have to meet with my therapist this Saturday…",
+      "character": "",
+      "char_img": "images/characters/MC/5_mad smile.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 19
+        }
+      }
+    },
+
+    "19": {
+      "_comment": "Part of Scene 1",
+      "text": "I guess I’ll just follow what they told me to do with this journal…",
+      "character": "",
+      "char_img": "images/characters/MC/5_giveup.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 20
+        }
+      }
+    },
+
+    "20": {
+      "_comment": "Part of Scene 1",
+      "text": "…When was the last time I wrote in this?",
+      "character": "",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 21
+        }
+      }
+    },
+
+    "21": {
+      "_comment": "Part of Scene 1",
+      "text": "",
+      "character": "",
+      "bg_img": "images/chapter2/scene_21.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 22
+        }
+      }
+    },
+
+    "22": {
+      "_comment": "Part of Scene 1",
+      "text": "…That should be enough for now",
+      "character": "",
+      "char_img": "images/characters/MC/5_aha.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 23
+        }
+      }
+    },
+
+    "23": {
+      "_comment": "Part of Scene 1",
+      "text": "Let me just check the time…",
+      "character": "",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 24
+        }
+      }
+    },
+
+    "24": {
+      "_comment": "Part of Scene 1",
+      "text": "…",
+      "character": "",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 25
+        }
+      }
+    },
+
+    "25": {
+      "_comment": "Part of Scene 1",
+      "text": "Shit",
+      "char_img": "images/characters/MC/5_mad smile.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 26
+        }
+      }
+    },
+
+    "26": {
+      "_comment": "Part of Scene 1",
+      "text": "I'm late",
+      "char_img": "images/characters/MC/5_disagree2.png",
+      "bg_img": "images/living_room_day.jpg",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 27
+        }
+      }
+    },
+
+    "27": {
+      "_comment": "End of Scene 1",
+      "text": "",
+      "bg_img": "images/chapter2/scene_27.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 28
+        }
+      }
+    },
+
+    "28": {
+      "_comment": "Part of Scene 2",
+      "text": "",
+      "bg_img": "images/chapter2/scene_28.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 29
+        }
+      }
+    },
+
+    "29": {
+      "_comment": "Part of Scene 2",
+      "text": "",
+      "bg_img": "images/chapter2/scene_29.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 30
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+  }
+}
+

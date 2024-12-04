@@ -1,0 +1,1328 @@
+{
+  "scenes":
+  {
+    "0": {
+      "_comment": "Part of Scene 1",
+      "text": "*You still hear the voices*",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    },
+    "1": {
+      "_comment": "Part of Scene 1",
+      "text": "“...It’s your fault they died…”“...I’m doing this for you…” “...I’ll protect you…” “...They did this to you…”",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 2
+        }
+      }
+    },
+    "2": {
+      "_comment": "Part of Scene 1",
+      "text": "*Alarm Noises*",
+      "character": "???",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 3
+        }
+      }
+    },
+    "3": {
+      "_comment": "Part of Scene 1",
+      "text": "Hello? Dear?..Oh! You're awake!",
+      "character": "Mother",
+      "char_img": "images/characters/MOTHER/mother_smile.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 4
+        }
+      }
+    },
+    "4": {
+      "_comment": "Part of Scene 1",
+      "text": "Thank goodness! How are you feeling? Do you need anything?",
+      "character": "Mother",
+      "char_img": "images/characters/MOTHER/mother_talk.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "I’m ok mom..It doesn’t hurt that bad..",
+          "char_img": "images/characters/MOTHER/mother_normal.png",
+          "nextScene": 5
+        },
+        "2": {
+          "text": "you don’t have to worry Mom, Im fine..",
+          "char_img": "images/characters/MOTHER/mother_normal.png",
+          "nextScene": 5
+        }
+      }
+    },
+    "5": {
+      "_comment": "Part of Scene 1",
+      "text": "You should eat breakfast! And..Oh My! You're already late! I haven’t noticed the time!",
+      "character": "Mother",
+      "char_img": "images/characters/MOTHER/mother_shy.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 6
+        }
+      }
+    },
+    "6": {
+      "_comment": "Part of Scene 1",
+      "text": "It’s already 9:15 in the morning! Your class started at 7:30am!",
+      "character": "Mother",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 7
+        }
+      }
+    },
+    "7": {
+      "_comment": "Part of Scene 1",
+      "text": "You should hurry, or you’re going to get expelled! This is already your principal’s last warning. He’s not happy with how you’ve been acting!",
+      "character": "Mother",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Ok..I will..Thanks Mom..",
+          "char_img": "images/character/MOTHER/mother_smile.png",
+          "nextScene": 8
+        },
+        "2": {
+          "text": "Whatever, Mom…",
+          "char_img": "images/character/MOTHER/mother_slight_mad.png",
+          "nextScene": 9
+        }
+      }
+    },
+    "8": {
+      "_comment": "Part of Scene 1, Response to #7",
+      "text": "*I went down to eat my breakfast and head out to school*",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 10
+        }
+      }
+    },
+    "9": {
+      "_comment": "Part of Scene 1, Response to #7",
+      "text": "*I went down to eat my breakfast and head out to school*",
+      "char_img": "images/characters/MC/5_disagree.png",
+      "bg_img": "images/bedroom_day.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 10
+        }
+      }
+    },
+    "10": {
+      "_comment": "Part of Scene 2",
+      "text": "I finally arrived at school..",
+      "char_img": "images/characters/MC/5_aha.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 11
+        }
+      }
+    },
+    "11": {
+      "_comment": "Part of Scene 2",
+      "text": "*I rushed to the classroom just to find my teacher waiting for me*",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 12
+        }
+      }
+    },
+    "12": {
+      "_comment": "Part of Scene 2",
+      "text": "Good morning, (Name of MC). It’s nice to see you late again.",
+      "character": "Teacher",
+      "char_img": "images/characters/TEACHER/teacher_mad.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "Good morning Ma’am..",
+          "nextScene": 13
+        }
+      }
+    },
+    "13": {
+      "_comment": "Part of Scene 2",
+      "text": "How are your scars from last week?",
+      "character": "Teacher",
+      "char_img": "images/characters/TEACHER/teacher_talking.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "It’s healing..But it doesn't matter",
+          "nextScene": 14
+        }
+      }
+    },
+      "14": {
+        "_comment": "Part of Scene 2",
+        "text": "No, but this is your last warning for being late in MY class",
+        "character": "Teacher",
+        "char_img": "images/characters/TEACHER/teacher_hmph.png",
+        "bg_img": "images/school_classroom.png",
+        "options": {
+          "1": {
+            "text": "...",
+            "nextScene": 15
+          }
+        }
+      },
+      "15": {
+        "_comment": "Part of Scene 2",
+        "text": "I’m going to send a letter to your mom, I can’t let you pass in my class if your always late with everything",
+        "character": "Teacher",
+      "char_img": "images/characters/TEACHER/teacher_talking.png",
+        "bg_img": "images/school_classroom.png",
+        "options": {
+          "1": {
+            "text": "Continue",
+            "nextScene": 16
+          }
+        }
+      },
+    "16": {
+      "_comment": "Part of Scene 2",
+      "text": "The ones who fought you last week were expelled, your injuries are one thing but you being late is another thing",
+      "character": "Teacher",
+      "char_img": "images/characters/TEACHER/teacher_doubt.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 17
+        }
+      }
+    },
+    "17": {
+      "_comment": "Part of Scene 2",
+      "text": "I’m sorry, but I’m going to have you sent first to detention and be absent for today.",
+      "character": "Teacher",
+      "char_img": "images/characters/TEACHER/teacher_think.png",
+      "bg_img": "images/school_classroom.png",
+      "options": {
+        "1": {
+          "text": " ...Fine.",
+          "nextScene": 18
+        }
+      }
+    },
+    "18": {
+      "_comment": "Part of Scene 3",
+      "text": "I'm about to head for detention today",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": "Continue walking",
+          "nextScene": 19
+        }
+      }
+    },
+    "19": {
+      "_comment": "Part of Scene 3",
+      "text": "*While passing by, I can hear a crying child*",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": " ...",
+          "nextScene": 20
+        }
+      }
+    },
+    "20": {
+      "_comment": "Part of Scene 3",
+      "text": "Knowing this school, there are no kids here—just us high schoolers.",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/school_stairway.png",
+      "options": {
+        "1": {
+          "text": " ...",
+          "nextScene": 21
+        }
+      }
+    },
+    "21": {
+      "_comment": "Part of Scene 3",
+      "text": "Maybe it’s just me…Anyway, I made it to the Detention Room",
+      "char_img": "images/characters/MC/5_sad smile.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 22
+        }
+      }
+    },
+    "22": {
+      "_comment": "Part of Scene 3",
+      "text":"Welcome back, (MC). I see this was your last warning.",
+      "character": "Teacher-Assigned",
+      "char_img": "#",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 23
+        }
+      }
+    },
+    "23": {
+      "_comment": "Part of Scene 3",
+      "text":"Hello again…",
+      "char_img": "#",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 24
+        }
+      }
+    },
+    "24": {
+      "_comment": "Part of Scene 3",
+      "text":"Take your seat beside (Friend 1)",
+      "character": "Teacher-Assigned",
+      "char_img": "images/characters/FRIEND/friend_confident.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Hey...",
+          "nextScene": 25
+        }
+      }   
+    },
+    "25": {
+      "_comment": "Part of Scene 3",
+      "text":"Hi...",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_normal.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Hey...",
+          "nextScene": 26
+        }
+      }
+    },
+    "26": {
+      "_comment": "Part of Scene 3",
+      "text":"So, you're back again..",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_mad.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 27
+        }
+      }
+    },
+    "27": {
+      "_comment": "Part of Scene 3",
+      "text":"Last warning?",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_thinking.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Yeah...I really don't want to come back",
+          "nextScene": 28
+        }
+      }    
+    },
+    "28": {
+      "_comment": "Part of Scene 3",
+      "text":"I get it.. I'm sorry",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_thinking.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "It's fine, I'll be fine",
+          "nextScene": 29
+        }
+      }    
+    },
+    "29": {
+      "_comment": "Part of Scene 3",
+      "text":"Wanna have lunch later?",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_normal.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "..Ok",
+          "nextScene": 30
+        }
+      }    
+    },
+    "30": {
+      "_comment": "Scene 4",
+      "text":"*The lunch bell rang. The teacher-assigned let us have our lunch*",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_normal.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 31
+        }
+      }    
+    },
+    "31": {
+      "_comment": "Part of Scene 4",
+      "text":"*My Friend and I went to get our lunch in the cafeteria*",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_normal.png",
+      "bg_img": "images/school_detention.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 32
+        }
+      }    
+    },
+    "32": {
+      "_comment": "Part of Scene 4",
+      "text":"Here's your food, Enjoy!",
+      "character": "Lunch Lady",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Ugh.. Oatmeal and Pizza again???",
+          "nextScene": 33
+        }
+      }    
+    },   
+    "33": {
+      "_comment": "Part of Scene 4",
+      "text":"Eh.. Better have something than nothing",
+      "character": "FRIEND",
+      "char_img": "images/characters/FRIEND/friend_thinking.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "It's fine, I'll be fine",
+          "nextScene": 34
+        }
+      }    
+    }, 
+    "34": {
+      "_comment": "Part of Scene 4",
+      "text":"*Bumps into bully*",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_mad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 35
+        }
+      }    
+    }, 
+    "35": {
+      "_comment": "Part of Scene 4",
+      "text":"Hey! Watch where you're going!",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_argue.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 36
+        }
+      }    
+    },    
+    "36": {
+      "_comment": "Part of Scene 4",
+      "text":"Oh, sorry..",
+      "character": "Friend",
+      "char_img": "images/characters/FRIEND/friend_shut.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 37
+        }
+      }    
+    }, 
+    "37": {
+      "_comment": "Part of Scene 4",
+      "text":"*Pushes Friend 1*",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_mad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 38
+        }
+      }    
+    }, 
+    "38": {
+      "_comment": "Part of Scene 4",
+      "text":"You think you're tough? Look at you! You can't even move a muscle!",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_argue.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 39
+        }
+      }    
+    },
+    "39": {
+      "_comment": "Part of Scene 4",
+      "text":"Wait.. I know you.. You took my friends away..",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_mad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 40
+        }
+      }    
+    },     
+    "40": {
+      "_comment": "Part of Scene 4",
+      "text":"I'm going to make sure you'll pay for that!",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_argue.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 41
+        }
+      }    
+    },     
+    "41": {
+      "_comment": "Part of Scene 4",
+      "text":"*Bully Punches Friend*",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_mad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 42
+        }
+      }    
+    },     
+    "42": {
+      "_comment": "Part of Scene 4",
+      "text":"*Bully Punches MC*",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_mad2.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 43
+        }
+      }    
+    },     
+   "43": {
+      "_comment": "Part of Scene 4",
+      "text":"What's wrong? Too weak to fight back??",
+      "character": "Bully",
+      "char_img": "images/characters/BULLY/bully_argue.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 44
+        }
+      }    
+    },     
+   "44": {
+      "_comment": "Part of Scene 4",
+      "text":"I'll show you what I can do then",
+      "character": "???",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 45
+        }
+      }    
+    },     
+   "45": {
+      "_comment": "Part of Scene 4",
+      "text":"*Moments later...*",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 46
+        }
+      }    
+    },     
+   "46": {
+      "_comment": "Part of Scene 4",
+      "text":"Uhh.. What happened?",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 47
+        }
+      }    
+    }, 
+  "47": {
+      "_comment": "Part of Scene 4",
+      "text":"Wait.. Why am i back home?",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 48
+        }
+      }    
+    },  
+  "48": {
+      "_comment": "Part of Scene 4",
+      "text":"Oh.. You're awake..",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_normal.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Mom? What happened?",
+          "nextScene": 49
+        }
+      }    
+    },
+  "49": {
+      "_comment": "Part of Scene 4",
+      "text":"I wanted to ask you the same thing myself..",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_eugh.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 50
+        }
+      }    
+    },
+  "49": {
+      "_comment": "Part of Scene 4",
+      "text":"Why did you beat someone up again?!",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Again?.. What do you mean?..",
+          "nextScene": 50
+        },
+        "2": {
+           "text": "What do you mean, mom?..",
+           "nextScene": 50
+        }
+      }    
+    },
+  "50": {
+      "_comment": "Part of Scene 4",
+      "text":"Your Teacher told me that you broke his jaw!",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 51
+        }
+      }    
+    },
+  "51": {
+      "_comment": "Part of Scene 4",
+      "text":"You even bruised him up! Why would you do that?!",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "..I don't know what you're talking about mom..",
+          "nextScene": 52
+        }
+      }    
+    },
+  "52": {
+      "_comment": "Part of Scene 4",
+      "text":"*sighs*",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_sigh.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "How did I even get home?",
+          "nextScene": 53
+        }
+      }    
+    },
+  "53": {
+      "_comment": "Part of Scene 4",
+      "text":"You even bruised him up! Why would you do that?!",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_argue.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "..I don't know what you're talking about mom..",
+          "nextScene": 54
+        }
+      }    
+    },     
+  "54": {
+      "_comment": "Part of Scene 4",
+      "text":"I got a call from your principal saying you were in a fight. I rushed to your school right away.",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_talk.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 55
+        }
+      }    
+    },     
+  "55": {
+      "_comment": "Part of Scene 4",
+      "text":"*Whispers* This wasn't the first time this happened..",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_sigh.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Mom?..",
+          "nextScene": 56
+        }
+      }    
+    },     
+  "56": {
+      "_comment": "Part of Scene 4",
+      "text":"I-I really don't know what happened.. I don't even remember beating someone up..",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 57
+        }
+      }    
+    },   
+  "57": {
+      "_comment": "Part of Scene 4",
+      "text":"*phone rings*",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_talk.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 58
+        }
+      }    
+    },    
+  "58": {
+      "_comment": "Part of Scene 4",
+      "text":"I'll be right back..",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_sigh.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 59
+        }
+      }    
+    },   
+  "59": {
+      "_comment": "Part of Scene 4",
+      "text":"Just.. stay here..",
+      "character": "Mom",
+      "char_img": "images/characters/MOTHER/mother_talk.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Okay..",
+          "nextScene": 60
+        }
+      }    
+    },    
+  "60": {
+      "_comment": "Part of Scene 4",
+      "text": "*door closes",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 61
+        }
+      }    
+    }, 
+  "61": {
+      "_comment": "Part of Scene 4",
+      "text":"What happened..",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 62
+        }
+      }    
+    },    
+  "62": {
+      "_comment": "Part of Scene 4",
+      "text":"I just blacked out.. but I don't remember beating someone up after..",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 63
+        }
+      }    
+    },    
+  "63": {
+      "_comment": "Part of Scene 4",
+      "text":"Was that really me?",
+      "character": "MC",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "I think I need to check on mom..",
+          "nextScene": 64
+        },
+        "2": {
+          "text": "*go to sleep*",
+          "nextScene": 96
+        }
+      }    
+    },    
+  "64": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"*on the way to your mom's room you hear her talking..*",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "*eavesdrop*",
+          "nextScene": 65
+        }
+      }    
+    }, 
+  "65": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I promise you, they're just.. not right'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "*you heard a different voice*",
+          "nextScene": 66
+        }
+      }    
+    },    
+  "66": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I don't care, that's YOUR son!'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "Is that dad?",
+          "nextScene": 67
+        }
+      }    
+    },                        
+  "67": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'YOU'RE THE ONE WHO BROUGHT ME INTO THIS MESS! HE'S NOT EVEN OUR SON!'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 68
+        }
+      }    
+    },     
+  "68": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'WE JUST GOT HIM BECAUSE YOU NEEDED THE MONEY TO SHOW THAT YOU CARED EVEN IF YOU DON'T",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 69
+        }
+      }    
+    },     
+  "69": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I DO CARE. MAYBE IF YOU AREN'T SUCH A WHORE, NONE OF THIS WOULD'VE HAPPENED'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 70
+        }
+      }    
+    },
+  "70": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'YOU CHEATED ON ME FIRST!'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_disagree2.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "*tsk*",
+          "nextScene": 71
+        }
+      }    
+    },
+  "71": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'THEN WHY DID YOU FOLLOW MY FOOTSTEPS'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 72
+        }
+      }    
+    },
+  "72": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'BECAUSE UNLIKE YOU, MY EX WAS GENTLEMAN THAN YOUR SORRY EXISTENCE'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 73
+        }
+      }    
+    },
+  "73": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'THEN WHY DON'T YOU GO BACK TO HIM?!'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 74
+        }
+      }    
+    },     
+  "74": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'*sighs* Why did I even think that calling you was a good idea..'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 75
+        }
+      }    
+    },     
+  "75": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'...'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 76
+        }
+      }    
+    },     
+  "76": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Why did we even choose this life? What went wrong..'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 77
+        }
+      }    
+    },     
+  "77": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Him..'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "tsk..",
+          "nextScene": 78
+        }
+      }    
+    }, 
+  "78": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I left because of him, he caused us EVERYTHING we accomplished'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 79
+        }
+      }    
+    },  
+  "79": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Our money, our life, our jobs..'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 80
+        }
+      }    
+    }, 
+  "80": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'HE took it all because of HIS disorders'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "*Whisper* Disorders?",
+          "nextScene": 81
+        }
+      }    
+    },     
+  "81": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Why couldn't we just do it instead of bringing THAT to our place?'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 82
+        }
+      }    
+    },  
+  "82": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'You knew I couldn't",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 83
+        }
+      }    
+    },     
+  "83": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'*sighs*'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 84
+        }
+      }    
+    },     
+  "84": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Why do you still care? You know you can bring him back to where he ACTUALLY belongs'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_disagree2.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 85
+        }
+      }    
+    },     
+  "85": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I have my reasons, I'm not going to give up on him!'",
+      "character": "Mom",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 86
+        }
+      }    
+    },     
+  "86": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'This is why I left..'",
+      "character": "Dad",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 87
+        }
+      }    
+    },
+  "87": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"*phone call ends*",
+      "char_img": "images/characters/MC/5_normal.png",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 88
+        }
+      }    
+    },     
+  "88": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"*goes back to your room*",
+      "bg_img": "images/house_hallway.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 89
+        }
+      }    
+    },     
+  "89": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"Is this why dad never came back..",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 90
+        }
+      }    
+    },                
+  "90": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"because of.. me?",
+      "char_img": "images/characters/MC/5_deep.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 91
+        }
+      }    
+    },                     
+  "91": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"What a day..",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 92
+        }
+      }    
+    },              
+  "92": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"First the fight, then this?..",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 93
+        }
+      }    
+    },      
+  "93": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"Maybe I should just leave.. I need to think this out first..",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 94
+        }
+      }    
+    },      
+  "93": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"But... I’m feeling tired right now.",
+      "char_img": "images/characters/MC/5_sad2.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 94
+        }
+      }    
+    },   
+  "94": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"I just.. need.. to think",
+      "char_img": "images/characters/MC/5_thinking.png",
+      "bg_img": "images/bedroom_night.png",
+      "options": {
+        "1": {
+          "text": "*go to sleep*",
+          "nextScene": 95
+        }
+      }    
+    },       
+  "95": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'That's only the start of what happened'",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 96
+        }
+      }    
+    },  
+  "96": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'Do you really wish to continue this?'",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 97
+        }
+      }    
+    },          
+  "97": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'It's not your fault..'",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 98
+        }
+      }    
+    },
+  "98": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I'll be here..'",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 99
+        }
+      }    
+    },     
+  "99": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"'I'll protect you..'",
+      "character": "???",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 100
+        }
+      }    
+    },     
+  "100": {
+      "_comment": "Part of Scene 4 if choice 1 was chosen",
+      "text":"- - END OF CHAPTER ONE - -",
+      "bg_img": "images/scene_0.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 101
+        }
+      }    
+    }
+    
+    
+    
+  }
+}
+
