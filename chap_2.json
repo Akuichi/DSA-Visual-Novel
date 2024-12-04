@@ -406,7 +406,7 @@
     "30": {
       "_comment": "Part of Scene 2",
       "text": "*someone bumps into you*",
-      "bg_img": "images/",
+      "bg_img": "images/street.png",
       "options": {
         "1": {
           "text": "...",
@@ -419,8 +419,8 @@
       "_comment": "Part of Scene 2",
       "text": "WATCH IT YOU CUNT!",
       "character": "Robber",
-      "char_img": "images/characters/ROBBER/",
-      "bg_img": "images/",
+      "char_img": "images/characters/ROBBER/normal.png",
+      "bg_img": "images/street.png",
       "options": {
         "1": {
           "text": "...",
@@ -432,8 +432,8 @@
     "32": {
       "_comment": "Part of Scene 2",
       "text": "*My wallet and locked necklace fell after being bumped by the robber*",
-      "char_img": "images/characters/ROBBER/",
-      "bg_img": "images/",
+      "char_img": "images/characters/ROBBER/normal.png",
+      "bg_img": "images/street.png",
       "options": {
         "1": {
           "text": "...",
@@ -446,8 +446,8 @@
       "_comment": "Part of Scene 2",
       "text": "*mumbles* I'M TAKING YOUR WALLET AND NECKLACE BECAUSE OF THAT!",
       "character": "Robber",
-      "char_img": "images/characters/ROBBER/",
-      "bg_img": "images/",
+      "char_img": "images/characters/ROBBER/normal.png",
+      "bg_img": "images/street.png",
       "options": {
         "1": {
           "text": "???",
@@ -460,8 +460,8 @@
       "_comment": "Part of Scene 2",
       "text": "Let me take his life for you…",
       "character": "???",
-      "char_img": "images/characters/ROBBER/",
-      "bg_img": "images/",
+      "char_img": "images/characters/ROBBER/normal.png",
+      "bg_img": "images/street.png",
       "options": {
         "1": {
           "text": "Give up your valuables",
