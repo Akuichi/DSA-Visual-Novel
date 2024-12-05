@@ -21,6 +21,10 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+import com.github.kwhat.jnativehook.NativeHookException;
+import com.github.kwhat.jnativehook.mouse.*;
+import com.github.kwhat.jnativehook.GlobalScreen;
+
 public class SceneManager
 {
     public JFrame frame;
@@ -33,7 +37,7 @@ public class SceneManager
     private JsonNode _storyData;
     private Thread _typingThread;
     private final SceneManager _sceneManager;
-    public int textSpeed;
+    public int textSpeed, windowType;
     public int currentScene, currentChapter;
 
     public SceneManager(int currentScene, int currentChapter)
@@ -49,8 +53,9 @@ public class SceneManager
         DrawGUIComponents();
 
         var fileManager = new FileManager(null,this);
-        textSpeed = fileManager.GetTextSpeed();
-
+        textSpeed = fileManager.GetSettings().textSpeed;
+        windowType = fileManager.GetSettings().windowType;
+        SetWindowType(windowType);
 
         DisplayScene();
 
@@ -70,7 +75,7 @@ public class SceneManager
         catch (IOException e)
         { //Just to catch errors
             e.printStackTrace(); //print to console yung error details, para mas madali mag debug if ever
-            JOptionPane.showMessageDialog(null, "Failed to load story data", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, "Failed to load story data", "Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1); //Exit program, status code of 1 just to indicate na error
         }
     }
@@ -247,6 +252,7 @@ public class SceneManager
             JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene));
             if (sceneNode != null)
             {
+                //_textArea.setText(sceneNode.get("text").asText());
                 _textArea.setText(sceneNode.get("text").asText());
                 LoadDialogueButtons();
             }           
@@ -264,19 +270,19 @@ public class SceneManager
             setOpaque(false);
             try
             {
-                // Load the image
+                //Load the image
                 File imgFile = new File(imagePath);
                 if (imgFile.exists())
                 {
                     BufferedImage originalImage = ImageIO.read(imgFile);
-                    // Scale the image to fit the panel size
+                    //Scale the image to fit the panel size
                     int targetWidth = 1280;
                     int targetHeight = 530;
                     backgroundImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_SMOOTH);
                 }
                 else
                 {
-                    backgroundImage = null; // No image if the file doesn't exist
+                    backgroundImage = null; //No image if walang file
                 }
             }
             catch (IOException e)
@@ -289,13 +295,13 @@ public class SceneManager
         @Override
         protected void paintComponent(Graphics g)
         {
-            super.paintComponent(g);  //Call the parent method for proper rendering
+            super.paintComponent(g);
             if (_backgroundImage != null)
             {
                 //Draw the image onto the panel
 
                 g.drawImage(_backgroundImage, 0, 0, getWidth(), getHeight(), this);
-                if (_characterImage != null)
+                if (_characterImage != null) //if may image for the character, paint over
                 {
                     g.drawImage(_characterImage, 0, 0, getWidth(), getHeight(), this);
                 }
@@ -306,13 +312,38 @@ public class SceneManager
 
 
 
+    public void SetWindowType(int windowType)
+    {
+        frame.setVisible(false);
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice gs = ge.getDefaultScreenDevice();
+        if (windowType == 0)
+        {
+            frame.dispose();
+            //undecorated = no borders, title bar
+            frame.setUndecorated(true);
+            //Fullscreen
+            frame.setResizable(false);
+            gs.setFullScreenWindow(frame);
+        }
+        else if (windowType == 1)
+        {
+            frame.dispose();
+            gs.setFullScreenWindow(null);
+            frame.setUndecorated(false);
+            frame.setResizable(true);
+            frame.setSize(1280, 720);
+            frame.setLocationRelativeTo(null);
+        }
+        frame.setVisible(true);
+    }
 
     private void DrawGUIComponents()
     {
         frame = new JFrame("Visual Novel");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1280, 720);
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.setLayout(new BorderLayout());
         frame.setLocationRelativeTo(null);
         frame.setFocusable(true);
@@ -329,7 +360,6 @@ public class SceneManager
 
         //text panel to put text area (dialogue text)
         _textPanel = new JPanel();
-        _textPanel.setFocusable(false);
         _textPanel.setLayout(new BorderLayout());
         _textPanel.setBackground(Color.BLACK);
         _textPanel.setPreferredSize(new Dimension(1280, 100)); //Height keep yung width 1280
@@ -357,7 +387,9 @@ public class SceneManager
 
 
 
-        _textPanel.add(new JScrollPane(_textArea), BorderLayout.CENTER); //Add sa textPanel yung text area and include scrollbar         
+
+
+        _textPanel.add(new JScrollPane(_textArea), BorderLayout.CENTER); //Add sa textPanel yung text area and include scrollbar
         _textPanel.add(_dialogueCharacterLabel, BorderLayout.NORTH);
 
         
@@ -413,34 +445,43 @@ public class SceneManager
         dialoguePanel.add(buttonPanel, BorderLayout.SOUTH); //Add buttons panel        
         dialoguePanel.setBackground(Color.DARK_GRAY);
 
-
-        //frame.add(_imageLabel, BorderLayout.NORTH);
         frame.add(dialoguePanel, BorderLayout.SOUTH);
-
-        _dialogueCharacterLabel.setFocusable(false);
-        _textPanel.setFocusable(false);
-        _textArea.setFocusable(false);
-        _option1Button.setFocusable(false);
-        _option2Button.setFocusable(false);
 
 
         //Button listeners para sa choices button
         _option1Button.addActionListener(e -> HandleDialogueOption(1));
         _option2Button.addActionListener(e -> HandleDialogueOption(2));
 
-        MouseAdapter StopTypingEffectListener = new MouseAdapter()
-        {
-            @Override
-            public void mouseClicked(MouseEvent e)
-            {
-                StopTypingEffect();  //Call yung stop typing effect
-            }
-        };
+        dialoguePanel.setFocusable(false);
+        _textArea.setFocusable(false);
+        buttonPanel.setFocusable(false);
+        _option2Button.setFocusable(false);
+        _option1Button.setFocusable(false);
 
-        //register sa event na ginawa natin^
-        frame.addMouseListener(StopTypingEffectListener);
-        dialoguePanel.addMouseListener(StopTypingEffectListener);
-        //_textArea.addMouseListener(StopTypingEffectListener);
+        //JNativeHook para sa click anywhere to skip typing effect
+        try
+        {
+            GlobalScreen.registerNativeHook();
+            GlobalScreen.addNativeMouseListener(new NativeMouseAdapter()
+            {
+                @Override
+                public void nativeMousePressed(NativeMouseEvent e)
+                {
+                    int x = e.getX();
+                    int y = e.getY();
+
+                    //Check if click is inside frame
+                    if (frame != null && frame.getBounds().contains(x, y))
+                    {
+                        StopTypingEffect();
+                    }
+                }
+            });
+        }
+        catch (NativeHookException e)
+        {
+            throw new RuntimeException(e);
+        }
 
 
         //New key listener for ESC button para sa pause menu
@@ -456,6 +497,12 @@ public class SceneManager
                     pauseDialog.setVisible(true);
                     //Open pause menu dialog
                 }
+                //If spacebar (skip typing)
+                if (e.getKeyCode() == KeyEvent.VK_SPACE)
+                {
+                    StopTypingEffect();
+                }
+
             }
         });
 

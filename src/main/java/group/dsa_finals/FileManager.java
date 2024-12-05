@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class FileManager
 {
     private String _saveFolderPath = "saved_games", _saveFilePath = _saveFolderPath + "/save.json";
-    private String _settingsFolderPath = "settings", _settingsFilePath = _saveFolderPath + "/config.json";
+    private String _settingsFolderPath = "settings", _settingsFilePath = _settingsFolderPath + "/config.json";
     private JDialog _parentDialog;
     private SceneManager _sceneManager;
 
@@ -21,7 +21,7 @@ public class FileManager
     public void SaveGame()
     {
         int response = JOptionPane.showConfirmDialog( //confirmation dialog
-                null,
+                _sceneManager.frame,
                 "This will overwrite the saved data, continue?",
                 "Confirm Save",
                 JOptionPane.YES_NO_OPTION
@@ -36,7 +36,7 @@ public class FileManager
             if (!dirCreated)
             {
                 JOptionPane.showMessageDialog(
-                        null,
+                        _sceneManager.frame,
                         "An error occurred while creating the folder",
                         "Error",
                         JOptionPane.ERROR_MESSAGE
@@ -52,7 +52,7 @@ public class FileManager
         {
             mapper.writeValue(new File(_saveFilePath), saveData);
             JOptionPane.showMessageDialog(
-                    null,
+                    _sceneManager.frame,
                     "Game saved successfully",
                     "Save Successful",
                     JOptionPane.INFORMATION_MESSAGE
@@ -61,7 +61,7 @@ public class FileManager
         catch (IOException e)
         {
             JOptionPane.showMessageDialog(
-                    null,
+                    _sceneManager.frame,
                     "An error occurred while saving: " + e.getMessage(),
                     "Save Game Error",
                     JOptionPane.ERROR_MESSAGE
@@ -75,7 +75,7 @@ public class FileManager
         if (_sceneManager != null)
         {
             int response = JOptionPane.showConfirmDialog( //confirmation dialog
-                    null,
+                    _sceneManager.frame,
                     "Unsaved progress will be lost, continue?",
                     "Confirm Load Game",
                     JOptionPane.YES_NO_OPTION
@@ -92,7 +92,7 @@ public class FileManager
                     _sceneManager.currentScene = saveDataNode.get("scene").asInt();
 
                     JOptionPane.showMessageDialog(
-                            null,
+                            _sceneManager.frame,
                             "Game loaded successfully",
                             "Load Successful",
                             JOptionPane.INFORMATION_MESSAGE
@@ -104,7 +104,7 @@ public class FileManager
                 else
                 {
                     JOptionPane.showMessageDialog(
-                            null,
+                            _sceneManager.frame,
                             "Missing or corrupt save data",
                             "Load Game Error",
                             JOptionPane.ERROR_MESSAGE
@@ -132,7 +132,7 @@ public class FileManager
                     int sceneToLoad = saveDataNode.get("scene").asInt();
                     new SceneManager(sceneToLoad,chapterToLoad);
                     JOptionPane.showMessageDialog(
-                            null,
+                            _sceneManager.frame,
                             "Game loaded successfully",
                             "Load Successful",
                             JOptionPane.INFORMATION_MESSAGE
@@ -141,7 +141,7 @@ public class FileManager
                 else
                 {
                     JOptionPane.showMessageDialog(
-                            null,
+                            _sceneManager.frame,
                             "Missing or corrupt save data",
                             "Load Game Error",
                             JOptionPane.ERROR_MESSAGE
@@ -157,20 +157,25 @@ public class FileManager
 
     }
 
-    public int GetTextSpeed()
+    public SettingsData GetSettings()
     {
+        if(!new File(_settingsFilePath).exists())
+        {
+            SaveSettings(50,1);
+        }
         ObjectMapper mapper = new ObjectMapper();
         try
         {
-            return mapper.readValue(new File(_settingsFilePath), Integer.class);
+            JsonNode settingsNode = mapper.readTree(new File(_settingsFilePath));
+            return new SettingsData(settingsNode.get("textSpeed").asInt(), settingsNode.get("windowType").asInt());
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
-        return 50;
+        return new SettingsData(50, 0); //Default to 50 text speed and false fullscreen pag walang value
     }
-    public void SaveSettings(int textSpeed)
+    public void SaveSettings(int textSpeed, int windowType)
     {
         File folder = new File(_settingsFolderPath);
         //check kung may settings folder na ba or not
@@ -180,7 +185,7 @@ public class FileManager
             if (!dirCreated)
             {
                 JOptionPane.showMessageDialog(
-                        null,
+                        _sceneManager.frame,
                         "An error occurred while creating the folder",
                         "Error",
                         JOptionPane.ERROR_MESSAGE
@@ -190,13 +195,15 @@ public class FileManager
         }
 
         ObjectMapper mapper = new ObjectMapper();
-        //Save text speed to JSON
+        SettingsData settingsData = new SettingsData(textSpeed, windowType);
+
+        //Save settings to JSON
         try
         {
-            mapper.writeValue(new File(_settingsFilePath), textSpeed);
-            _sceneManager.textSpeed = textSpeed;
+            mapper.writeValue(new File(_settingsFilePath), settingsData);
+            _sceneManager.textSpeed = textSpeed; //update actual textspeed sa game
             JOptionPane.showMessageDialog(
-                    null,
+                    _sceneManager.frame,
                     "Settings saved successfully",
                     "Save Successful",
                     JOptionPane.INFORMATION_MESSAGE
@@ -205,7 +212,7 @@ public class FileManager
         catch (IOException e)
         {
             JOptionPane.showMessageDialog(
-                    null,
+                    _sceneManager.frame,
                     "An error occurred while saving: " + e.getMessage(),
                     "Error",
                     JOptionPane.ERROR_MESSAGE
@@ -224,6 +231,19 @@ public class FileManager
         {
             this.chapter = chapter;
             this.scene = scene;
+        }
+    }
+
+
+    public static class SettingsData
+    {
+        public int textSpeed;
+        public int windowType;
+
+        public SettingsData(int textSpeed, int windowType)
+        {
+            this.textSpeed = textSpeed;
+            this.windowType = windowType;
         }
     }
 

@@ -33,9 +33,8 @@ public class PauseMenuDialog extends JDialog
         _mainMenuButton = new JButton("Main Menu");
         _quitButton = new JButton("Quit Game");
 
-
-        _settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _resumeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        _settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _loadButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         _mainMenuButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -76,7 +75,7 @@ public class PauseMenuDialog extends JDialog
         _mainMenuButton.addActionListener(e ->
         {
             int response = JOptionPane.showConfirmDialog( //confirmation dialog
-                    null,
+                    _sceneManager.frame,
                     "Unsaved progress will be lost, return to main menu?",
                     "Quit to Main Menu",
                     JOptionPane.YES_NO_OPTION
@@ -91,7 +90,7 @@ public class PauseMenuDialog extends JDialog
         _quitButton.addActionListener(e ->
         {
             int response = JOptionPane.showConfirmDialog( //confirmation dialog
-                    null,
+                    _sceneManager.frame,
                     "Unsaved progress will be lost, are you sure you want to quit?",
                     "Quit to Desktop",
                     JOptionPane.YES_NO_OPTION
@@ -105,13 +104,13 @@ public class PauseMenuDialog extends JDialog
 
 
         add(Box.createVerticalStrut(100));
+        add(_resumeButton);
+        add(Box.createVerticalStrut(10));
         add(_saveButton);
         add(Box.createVerticalStrut(10));
         add(_loadButton);
         add(Box.createVerticalStrut(10));
         add(_settingsButton);
-        add(Box.createVerticalStrut(10));
-        add(_resumeButton);
         add(Box.createVerticalStrut(10));
         add(_mainMenuButton);
         add(Box.createVerticalStrut(10));

@@ -116,7 +116,7 @@
     "8": {
       "_comment": "Part of Scene 1, Response to #7",
       "text": "*I went down to eat my breakfast and head out to school*",
-      "char_img": "images/character/MOTHER/mother_smile.png",
+      "char_img": "images/characters/MOTHER/mother_smile.png",
       "bg_img": "images/bedroom_day.png",
       "options": {
         "1": {
@@ -128,7 +128,7 @@
     "9": {
       "_comment": "Part of Scene 1, Response to #7",
       "text": "*I went down to eat my breakfast and head out to school*",
-      "char_img": "images/character/MOTHER/mother_slight_mad.png",
+      "char_img": "images/characters/MOTHER/mother_slight_mad.png",
       "bg_img": "images/bedroom_day.png",
       "options": {
         "1": {
@@ -302,7 +302,7 @@
     "23": {
       "_comment": "Part of Scene 3",
       "text":"Hello again…",
-      "char_img": "5_sad smile.png",
+      "char_img": "images/characters/MC/5_sad smile.png",
       "bg_img": "images/school_detention.png",
       "options": {
         "1": {
@@ -786,7 +786,7 @@
     },    
   "61": {
       "_comment": "Part of Scene 4",
-      "text": "*door closes",
+      "text": "*door closes*",
       "bg_img": "images/bedroom_night.png",
       "options": {
         "1": {
