@@ -11,6 +11,14 @@ package group.dsa_finals;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
+import javax.imageio.stream.ImageInputStream;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.*;
+import javax.imageio.*;
+import java.io.*;
+import java.util.List;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -20,6 +28,7 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import java.awt.image.*;
 
 import com.github.kwhat.jnativehook.NativeHookException;
 import com.github.kwhat.jnativehook.mouse.*;
@@ -27,6 +36,10 @@ import com.github.kwhat.jnativehook.GlobalScreen;
 
 public class SceneManager
 {
+    private boolean oneShotGif = false;
+    private List<BufferedImage> frames;
+    private int currentFrame = 0;
+    private Timer timer;
     public JFrame frame;
     private BackgroundPanel _backgroundPanel;
     private Image _backgroundImage, _characterImage;
@@ -138,7 +151,16 @@ public class SceneManager
 
             String imagePath = sceneNode.get("bg_img").asText(); // Get image path from JSON
             _backgroundImage = new ImageIcon(imagePath).getImage();
-
+            if (sceneNode.has("oneShotGif"))
+            {
+                NonLoopingGifViewer(imagePath);
+                oneShotGif = true;
+                currentFrame = 0;
+            }
+            else
+            {
+                oneShotGif = false;
+            }
             if (sceneNode.has("char_img"))
             {
                 imagePath = sceneNode.get("char_img").asText();
@@ -300,7 +322,14 @@ public class SceneManager
             {
                 //Draw the image onto the panel
 
-                g.drawImage(_backgroundImage, 0, 0, getWidth(), getHeight(), this);
+
+                if (oneShotGif)
+                {
+                    BufferedImage currentImage = frames.get(currentFrame);
+                    g.drawImage(currentImage, 0, 0, getWidth(), getHeight(), this);
+                }
+                else
+                    g.drawImage(_backgroundImage, 0, 0, getWidth(), getHeight(), this);
                 if (_characterImage != null) //if may image for the character, paint over
                 {
                     g.drawImage(_characterImage, 0, 0, getWidth(), getHeight(), this);
@@ -309,6 +338,42 @@ public class SceneManager
             }
         }
     }
+
+    public void NonLoopingGifViewer(String gifPath) throws IOException
+    {
+        frames = loadGif(gifPath);
+
+        //Timer to display each frame, 41ms para close sa 24fps
+        timer = new Timer(41, e -> {
+            if (currentFrame < frames.size() - 1) {
+                currentFrame++;
+                _backgroundPanel.repaint();
+            } else {
+                timer.stop();  //Stop after the last frame
+            }
+        });
+
+        timer.start();
+    }
+
+    private List<BufferedImage> loadGif(String path) throws IOException {
+        //Load the GIF into a BufferedImage
+        ImageReader reader = ImageIO.getImageReadersByFormatName("gif").next();
+        ImageInputStream stream = ImageIO.createImageInputStream(new File(path));
+        reader.setInput(stream);
+
+        int numFrames = reader.getNumImages(true);
+        List<BufferedImage> framesList = new java.util.ArrayList<>();
+
+        //Extract all frames from the GIF
+        for (int i = 0; i < numFrames; i++) {
+            BufferedImage frame = reader.read(i);
+            framesList.add(frame);
+        }
+
+        return framesList;
+    }
+
 
 
 

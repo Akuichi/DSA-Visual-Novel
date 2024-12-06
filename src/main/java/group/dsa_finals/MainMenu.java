@@ -36,9 +36,10 @@ public class MainMenu extends JFrame
 
     private void LoadGame()
     {
+        dispose();
         var fileManager = new FileManager(null,null);
         fileManager.LoadGame();
-        dispose();
+
     }
 
     private void ExitGame()
