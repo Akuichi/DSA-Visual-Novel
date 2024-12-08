@@ -133,7 +133,7 @@
     },
     "11": {
       "_comment": "Part of Scene 1",
-      "text": "Because I’m also YOU",
+      "text": "Because I am also YOU",
       "character": "???",
       "bg_img": "images/unknown.gif",
       "options": {
@@ -267,6 +267,7 @@
       "_comment": "Part of Scene 1",
       "text": "(MC’s Name)! Breakfast is ready!",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile4.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -304,6 +305,7 @@
       "_comment": "Part of Scene 1",
       "text": "I made your favorite! Dino Nuggets!",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -353,6 +355,7 @@
       "_comment": "Part of Scene 1",
       "text": "*sigh* I’m home~!",
       "character": "Dad",
+      "char_img": "images/characters/father_real/sick.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -367,6 +370,7 @@
       "_comment": "Part of Scene 1",
       "text": "Honey! Welcome home dear~",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile3.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -380,6 +384,7 @@
       "_comment": "Part of Scene 1",
       "text": "*kisses Dad on the cheek*",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -393,6 +398,7 @@
       "_comment": "Part of Scene 1",
       "text": "How did work go for today? Or should I say last night?",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile4.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -406,6 +412,7 @@
       "_comment": "Part of Scene 1",
       "text": "Heh, it wasn’t too bad, this old man can still bear those thugs!",
       "character": "Dad",
+      "char_img": "images/characters/father_real/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -433,6 +440,7 @@
       "_comment": "Part of Scene 1",
       "text": "Hey! There’s my bumpkin! *pats head*",
       "character": "Dad",
+      "char_img": "images/characters/father_real/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -446,6 +454,7 @@
       "_comment": "Part of Scene 1",
       "text": "Are you ready for your first day of school?",
       "character": "Dad",
+      "char_img": "images/characters/father_real/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -473,6 +482,7 @@
       "_comment": "Part of Scene 1",
       "text": "*pats head* That's my boy!",
       "character": "Dad",
+      "char_img": "images/characters/father_real/wink.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -486,6 +496,7 @@
       "_comment": "Part of Scene 1",
       "text": "*whispers* I’ll bring him to school while I wait for you here, love~",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/normal2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -499,6 +510,7 @@
       "_comment": "Part of Scene 1",
       "text": "Hehe *whispers* I’ll be waiting dear *kisses Mom by the cheek*",
       "character": "Dad",
+      "char_img": "images/characters/father_real/wink.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -526,6 +538,7 @@
       "_comment": "Part of Scene 1",
       "text": "Coming, Dear! Bye Love~!",
       "character": "Mom",
+      "char_img": "images/characters/mother_real/smile4.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -539,6 +552,7 @@
       "_comment": "Part of Scene 1",
       "text": "Take care!",
       "character": "Dad",
+      "char_img": "images/characters/father_real/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -693,7 +707,7 @@
 
     "55": {
       "_comment": "Part of Scene 1",
-      "text": "She never takes me this late ever…",
+      "text": "She was never this late ever…",
       "character": "MC",
       "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
@@ -707,7 +721,7 @@
 
     "56": {
       "_comment": "Part of Scene 1",
-      "text": "*starts to cry* Did she forget about me?.....",
+      "text": "*starts to cry* Did she forgot about me?.....",
       "character": "MC",
       "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
@@ -764,6 +778,7 @@
       "_comment": "Part of Scene 1",
       "text": "?",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/ooo.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -777,6 +792,7 @@
       "_comment": "Part of Scene 1",
       "text": "(MC’s Name)?",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/normal_talk2.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -790,6 +806,7 @@
       "_comment": "Part of Scene 1",
       "text": "Why are you still here?",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/ooo.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -817,6 +834,7 @@
       "_comment": "Part of Scene 1",
       "text": "Hang on, let me call her! Maybe she’s on her way and it’s traffic at this time with her work!",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -844,6 +862,7 @@
       "_comment": "Part of Scene 1",
       "text": "*dials number*",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -856,6 +875,7 @@
     "67": {
       "_comment": "Part of Scene 1",
       "text": "...",
+      "char_img": "images/characters/teacher_past/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -868,6 +888,7 @@
     "68": {
       "_comment": "Part of Scene 1",
       "text": "...",
+      "char_img": "images/characters/teacher_past/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -880,6 +901,7 @@
     "69": {
       "_comment": "Part of Scene 1",
       "text": "...",
+      "char_img": "images/characters/teacher_past/upset.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -893,6 +915,7 @@
       "_comment": "Part of Scene 1",
       "text": "I’m sorry, the other line seems to be busy right now. Please call again later.",
       "character": "Phone",
+      "char_img": "images/characters/teacher_past/angry2.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -906,6 +929,7 @@
       "_comment": "Part of Scene 1",
       "text": "..that’s not right…I’ll try to call again..",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/pout.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -945,6 +969,7 @@
       "_comment": "Part of Scene 1",
       "text": "Oh! Yes! He’s here!",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/normal_talk2.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -958,6 +983,7 @@
       "_comment": "Part of Scene 1",
       "text": "(MC’s Name)! Your father came to pick you up!",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/normal_talk.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1013,6 +1039,7 @@
       "_comment": "Part of Scene 1",
       "text": "Oh.. go ahead, I’ll just go on ahead...",
       "character": "Teacher",
+      "char_img": "images/characters/teacher_past/ooo.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1025,6 +1052,7 @@
     "80": {
       "_comment": "Part of Scene 1",
       "text": "*teacher leaves*",
+      "char_img": "images/characters/teacher_past/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1064,7 +1092,7 @@
 
     "83": {
       "_comment": "Part of Scene 1",
-      "text": "I’m sorry you had to hear this at this time…",
+      "text": "I’m sorry you have to hear this at this time…",
       "character": "Police",
       "char_img": "images/characters/police/embarrassed.png",
       "bg_img": "images/school_night.png",
@@ -1078,7 +1106,7 @@
 
     "84": {
       "_comment": "Part of Scene 1",
-      "text": "But your parents are dead…",
+      "text": "But... your parents are dead…",
       "character": "Police",
       "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
@@ -1285,7 +1313,7 @@
 
     "99": {
       "_comment": "Part of Scene 1",
-      "text": "That’s when you realize he wasn’t just a cop…",
+      "text": "That’s when you realized that he wasn’t just a cop…",
       "character": "“Me”",
       "bg_img": "images/unknown.gif",
       "options": {
@@ -1311,7 +1339,7 @@
 
     "101": {
       "_comment": "Part of Scene 1",
-      "text": "He was after your Dad’s trust to be able to have you alone when your Dad and Mom are gone…",
+      "text": "He was after your Dad’s trust. Aiming to have you alone when your Dad and Mom are not around",
       "character": "“Me”",
       "bg_img": "images/unknown.gif",
       "options": {
@@ -1337,7 +1365,7 @@
 
     "103": {
       "_comment": "Part of Scene 1",
-      "text": "and the bully who’s been bullying you is his child..and also the one who’s in love with her…",
+      "text": "and the one who’s been bullying you is his child..and also the one who’s in love with her…",
       "character": "“Me”",
       "bg_img": "images/unknown.gif",
       "options": {
@@ -1428,7 +1456,7 @@
 
     "110": {
       "_comment": "Part of Scene 1",
-      "text": "And your “Dad” left because he got tired of you taking too much expense..",
+      "text": "And your “Dad” left because he got tired of wasting time and money on you",
       "character": "“Me”",
       "bg_img": "images/unknown.gif",
       "options": {
