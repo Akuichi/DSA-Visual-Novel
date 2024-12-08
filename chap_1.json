@@ -417,14 +417,36 @@
       "_comment": "Part of Scene 4",
       "text":"Here's your food, Enjoy!",
       "character": "Lunch Lady",
+      "char_img": "images/characters/LunchLady/normal.png",
       "bg_img": "images/school_canteen.png",
       "options": {
         "1": {
           "text": "Ugh.. Oatmeal and Pizza again???",
           "nextScene": 33
+        },
+        "2": {
+          "text": "WOW Oatmeal and Pizza? This must be a dream",
+          "nextScene": 120
         }
       }    
-    },   
+    },
+
+    "120": {
+      "_comment": "Part of Scene 4",
+      "text":"How is that combo even good?",
+      "character": "Friend",
+      "char_img": "images/characters/FRIEND/friend_thinking.png",
+      "bg_img": "images/school_canteen.png",
+      "options": {
+        "1": {
+          "text": "You don't understand, let me show you why-",
+          "nextScene": 34
+        }
+      }
+    },
+
+
+
     "33": {
       "_comment": "Part of Scene 4",
       "text":"Eh.. Better to have something than nothing",

@@ -15,20 +15,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.imageio.stream.ImageInputStream;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.*;
 import javax.imageio.*;
-import java.io.*;
 import java.util.List;
-import javax.swing.*;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.event.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import java.awt.image.*;
 
 import com.github.kwhat.jnativehook.NativeHookException;
 import com.github.kwhat.jnativehook.mouse.*;
@@ -36,14 +29,15 @@ import com.github.kwhat.jnativehook.GlobalScreen;
 
 public class SceneManager
 {
-    private boolean oneShotGif = false;
-    private List<BufferedImage> frames;
-    private int currentFrame = 0;
-    private Timer timer;
+    private int _resolutionX, _resolutionY, _textAreaHeight;
+    private boolean _isOneShotGif = false, _isPlayingAnimation = false;
+    private List<BufferedImage> _gifFrames;
+    private int _currentFrame = 0;
+    private Timer _timer;
     public JFrame frame;
     private BackgroundPanel _backgroundPanel;
     private Image _backgroundImage, _characterImage;
-    private JLabel _imageLabel, _dialogueCharacterLabel;
+    private JLabel _dialogueCharacterLabel;
     private JTextArea _textArea;
     private JButton _option1Button, _option2Button;
     private JPanel _textPanel;
@@ -65,11 +59,29 @@ public class SceneManager
         
         DrawGUIComponents();
 
+
+
+        frame.addComponentListener(new ComponentAdapter()
+        {
+            @Override
+            public void componentResized(ComponentEvent e)
+            {
+                int width = frame.getContentPane().getWidth();
+                int height = frame.getContentPane().getHeight();;
+                _resolutionX = width;
+                _resolutionY = (int) (height / 1.384615384615385);
+                _textAreaHeight = height - _resolutionY;
+                _backgroundPanel.revalidate();
+                _backgroundPanel.repaint();
+                LoadDialogueButtons();
+            }
+        });
+
         var fileManager = new FileManager(null,this);
         textSpeed = fileManager.GetSettings().textSpeed;
         windowType = fileManager.GetSettings().windowType;
-        SetWindowType(windowType);
 
+        SetWindowType(windowType);
         DisplayScene();
 
 
@@ -99,12 +111,25 @@ public class SceneManager
         if (sceneNode == null)
         {  //If blank yung scenenode for some reason may mali sa JSON
             _textArea.setText("Scene not found");
-            _imageLabel.setIcon(null);
             _option1Button.setVisible(false);
             _option2Button.setVisible(false);
             return; //return, end method/function
         }
 
+        UpdateCharacterLabel(sceneNode); //C-check if merong character label for the current scene then display siya if yes otherwise blank
+
+        //Set scene text
+        _textArea.setText(""); //Reset yung text ng dialogue para start from scratch yung typing effect ng dialogue
+        String dialogueText = sceneNode.get("text").asText(); //store yung dialogue text sa string
+
+        DisplayTypingEffect(dialogueText); //Do the typing effect on a separate thread
+        DisplayImages(sceneNode); //Checks if may bg image and character images ba and depending dun ppaint over siya sa background panel
+
+
+    }
+
+    private void UpdateCharacterLabel(JsonNode sceneNode)
+    {
         if (sceneNode.has("character"))
         {
             var characterNode = sceneNode.get("character"); //store as variable yung character node sa JSON
@@ -114,11 +139,10 @@ public class SceneManager
         {
             _dialogueCharacterLabel.setText("");
         }
+    }
 
-        //Set scene text
-        _textArea.setText(""); //Reset yung text ng dialogue para start from scratch yung typing effect ng dialogue
-        String dialogueText = sceneNode.get("text").asText(); //store yung dialogue text sa string
-        
+    private void DisplayTypingEffect(String dialogueText)
+    {
         //Gagamit tayo ng thread para while running tong code na to makakapag interact parin tayo sa app
         //kasi nasa separate thread siya nag rrun
         _typingThread = new Thread(() ->
@@ -126,8 +150,9 @@ public class SceneManager
             try
             {
                 //Temporarily hide buttons while dialogue is typing and adjust panel size to fill the gap
-                _textPanel.setPreferredSize(new Dimension(1280, 150)); //150 yung height because we tempoararily disabled the buttons sa next line of code, para walang empty gap
-                _option1Button.setVisible(false); 
+                _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight));
+                _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight);
+                _option1Button.setVisible(false);
                 _option2Button.setVisible(false);
                 for (int i = 0; i < dialogueText.length(); i++)
                 { //Simple for loop to print characters of string 1 by 1
@@ -143,9 +168,11 @@ public class SceneManager
             }
         });
         _typingThread.start(); //start the thread we created
+    }
 
-
-       //LOAD Background image for scene and char image if meron
+    private void DisplayImages(JsonNode sceneNode)
+    {
+        //LOAD Background image for scene and char image if meron
         try
         {
 
@@ -153,13 +180,13 @@ public class SceneManager
             _backgroundImage = new ImageIcon(imagePath).getImage();
             if (sceneNode.has("oneShotGif"))
             {
-                NonLoopingGifViewer(imagePath);
-                oneShotGif = true;
-                currentFrame = 0;
+                PlayOneShotGif(imagePath);
+                _isOneShotGif = true;
+                _currentFrame = 0;
             }
             else
             {
-                oneShotGif = false;
+                _isOneShotGif = false;
             }
             if (sceneNode.has("char_img"))
             {
@@ -183,12 +210,11 @@ public class SceneManager
             System.out.println("Error: " + e);
         }
 
-
         _backgroundPanel.revalidate();
         _backgroundPanel.repaint();
-
-
     }
+
+
 
     private void LoadDialogueButtons()
     {
@@ -196,7 +222,6 @@ public class SceneManager
         if (sceneNode == null)
         {
             _textArea.setText("Scene not found");
-            _imageLabel.setIcon(null);
             _option1Button.setVisible(false);
             _option2Button.setVisible(false);
             return;
@@ -225,20 +250,22 @@ public class SceneManager
             _option2Button.setVisible(false);
         }
 
+
         if (_option1Button.isVisible() && _option2Button.isVisible())
         {
-            //If the buttons are visible, give the textPanel a fixed height (100px)
-            _textPanel.setPreferredSize(new Dimension(1280, 100));
+            _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight - 50));
+            _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight - 50);
         }
         else if (_option1Button.isVisible() || _option2Button.isVisible())
         {
-            _textPanel.setPreferredSize(new Dimension(1280, 125)); // Adjust height to fill the space
+            _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight - 25)); // Adjust height to fill the space
+            _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight - 25);
         }
         else
         {
-            _textPanel.setPreferredSize(new Dimension(1280, 150));
+            _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight));
+            _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight);
         }
-
     }
 
     //Eto yung event na ginawa para sa dialogue choices button the (int option) here refers to the option number (1, 2) in our case sa ngayon
@@ -290,28 +317,6 @@ public class SceneManager
         public BackgroundPanel(String imagePath)
         {
             setOpaque(false);
-            try
-            {
-                //Load the image
-                File imgFile = new File(imagePath);
-                if (imgFile.exists())
-                {
-                    BufferedImage originalImage = ImageIO.read(imgFile);
-                    //Scale the image to fit the panel size
-                    int targetWidth = 1280;
-                    int targetHeight = 530;
-                    backgroundImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_SMOOTH);
-                }
-                else
-                {
-                    backgroundImage = null; //No image if walang file
-                }
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-                backgroundImage = null;
-            }
         }
 
         @Override
@@ -322,38 +327,52 @@ public class SceneManager
             {
                 //Draw the image onto the panel
 
-
-                if (oneShotGif)
+                if (_isOneShotGif)
                 {
-                    BufferedImage currentImage = frames.get(currentFrame);
-                    g.drawImage(currentImage, 0, 0, getWidth(), getHeight(), this);
+                    BufferedImage currentImage = _gifFrames.get(_currentFrame);
+                    g.drawImage(currentImage, 0, 0, _resolutionX, _resolutionY, this);
                 }
                 else
-                    g.drawImage(_backgroundImage, 0, 0, getWidth(), getHeight(), this);
+                    g.drawImage(_backgroundImage, 0, 0, _resolutionX, _resolutionY, this);
                 if (_characterImage != null) //if may image for the character, paint over
                 {
-                    g.drawImage(_characterImage, 0, 0, getWidth(), getHeight(), this);
+                    g.drawImage(_characterImage, 0, 0, _resolutionX, _resolutionY, this);
                 }
-
             }
         }
     }
 
-    public void NonLoopingGifViewer(String gifPath) throws IOException
+    public void PlayOneShotGif(String gifPath) throws IOException
     {
-        frames = loadGif(gifPath);
+        _gifFrames = loadGif(gifPath);
+
+        _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight));
+        _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight);
+        _option1Button.setVisible(false);
+
+        _isPlayingAnimation = true;
 
         //Timer to display each frame, 41ms para close sa 24fps
-        timer = new Timer(41, e -> {
-            if (currentFrame < frames.size() - 1) {
-                currentFrame++;
+        _timer = new Timer(41, e -> {
+            if (_currentFrame < _gifFrames.size() - 1) {
+                _currentFrame++;
                 _backgroundPanel.repaint();
             } else {
-                timer.stop();  //Stop after the last frame
+                _timer.stop();  //Stop after the last frame
+
+                //Go to next scene after animation
+                JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene));
+                if (sceneNode.has("isTransition"))
+                {
+                    currentScene = sceneNode.get("options").get("1").get("nextScene").asInt();
+                    DisplayScene();
+                }
+                _option1Button.setVisible(true);
+                _isPlayingAnimation = false;
             }
         });
 
-        timer.start();
+        _timer.start();
     }
 
     private List<BufferedImage> loadGif(String path) throws IOException {
@@ -400,6 +419,7 @@ public class SceneManager
             frame.setSize(1280, 720);
             frame.setLocationRelativeTo(null);
         }
+        LoadDialogueButtons();
         frame.setVisible(true);
     }
 
@@ -427,8 +447,6 @@ public class SceneManager
         _textPanel = new JPanel();
         _textPanel.setLayout(new BorderLayout());
         _textPanel.setBackground(Color.BLACK);
-        _textPanel.setPreferredSize(new Dimension(1280, 100)); //Height keep yung width 1280
-        _textPanel.setMaximumSize(new Dimension(1280, 150));
         _textPanel.setBorder(BorderFactory.createEmptyBorder());
 
         //jLabel to show the name of the character speaking if there is one
@@ -436,7 +454,6 @@ public class SceneManager
         _dialogueCharacterLabel.setPreferredSize(new Dimension(1000, 25));
         _dialogueCharacterLabel.setBackground(Color.BLACK);
         _dialogueCharacterLabel.setForeground(Color.WHITE);
-        _dialogueCharacterLabel.setText("YES");
         _dialogueCharacterLabel.setFont(new Font("Roboto", Font.BOLD, 18));
         _dialogueCharacterLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
         
@@ -527,7 +544,7 @@ public class SceneManager
         try
         {
             GlobalScreen.registerNativeHook();
-            GlobalScreen.addNativeMouseListener(new NativeMouseAdapter()
+            GlobalScreen.addNativeMouseListener(new NativeMouseListener()
             {
                 @Override
                 public void nativeMousePressed(NativeMouseEvent e)
@@ -539,6 +556,11 @@ public class SceneManager
                     if (frame != null && frame.getBounds().contains(x, y))
                     {
                         StopTypingEffect();
+                    }
+
+                    if (_isPlayingAnimation)
+                    {
+                        _currentFrame = _gifFrames.size() -  1;
                     }
                 }
             });

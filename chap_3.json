@@ -16,7 +16,6 @@
       "_comment": "Part of Scene 1",
       "text": "*...*",
       "bg_img": "images/void.gif",
-      "oneShotGif": true,
       "options": {
         "1": {
           "text": "Continue",
@@ -196,6 +195,7 @@
       "_comment": "Part of Scene 1 BRIGHT LIGHT DISPLAY",
       "text": "",
       "bg_img": "images/dining_transition.gif",
+      "isTransition": true,
       "oneShotGif": true,
       "options": {
         "1": {
@@ -279,6 +279,7 @@
       "_comment": "Part of Scene 1",
       "text": "Coming mom!",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/smile2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -290,6 +291,7 @@
     "24": {
       "_comment": "Part of Scene 1",
       "text": "*runs down*",
+      "char_img": "images/characters/MC_YOUNG/smile2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -314,6 +316,7 @@
       "_comment": "Part of Scene 1",
       "text": "YAY! Thank you mom!",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -325,7 +328,7 @@
     "27": {
       "_comment": "Part of Scene 1",
       "text": "*MC proceeds to eat*",
-      "character": "“Me”??",
+      "char_img": "images/characters/MC_YOUNG/smile2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -338,6 +341,7 @@
       "_comment": "Part of Scene 1",
       "text": "*door opens*",
       "bg_img": "images/dining_room.png",
+      "char_img": "images/characters/MC_YOUNG/smile2.png",
       "options": {
         "1": {
           "text": "Continue",
@@ -414,6 +418,7 @@
     "34": {
       "_comment": "Part of Scene 1",
       "text": "*munches* Dad!",
+      "char_img": "images/characters/MC_YOUNG/smile.png",
       "character": "MC",
       "bg_img": "images/dining_room.png",
       "options": {
@@ -454,6 +459,7 @@
       "_comment": "Part of Scene 1",
       "text": "Yep! I’ll be ready like how you are Dad!",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/smile2.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -506,6 +512,7 @@
       "_comment": "Part of Scene 1",
       "text": "C’mon Mom! It’s almost 8!",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/smile.png",
       "bg_img": "images/dining_room.png",
       "options": {
         "1": {
@@ -634,6 +641,7 @@
       "_comment": "Part of Scene 1",
       "text": "",
       "oneShotGif": true,
+      "isTransition": true,
       "bg_img": "images/school_night_transition.gif",
       "options": {
         "1": {
@@ -659,6 +667,7 @@
       "_comment": "Part of Scene 1",
       "text": "...",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -672,6 +681,7 @@
       "_comment": "Part of Scene 1",
       "text": "Why is Mom taking so long?...",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -685,6 +695,7 @@
       "_comment": "Part of Scene 1",
       "text": "She never takes me this late ever…",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -698,6 +709,7 @@
       "_comment": "Part of Scene 1",
       "text": "*starts to cry* Did she forget about me?.....",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -711,6 +723,7 @@
       "_comment": "Part of Scene 1",
       "text": "Was it because I was in a rush everyday to go to school…",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -724,6 +737,7 @@
       "_comment": "Part of Scene 1",
       "text": "I didn’t mean to….",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -736,6 +750,7 @@
     "59": {
       "_comment": "Part of Scene 1",
       "text": "*footsteps*",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -788,6 +803,7 @@
       "_comment": "Part of Scene 1",
       "text": "..I think my Mom forgot about me….*sniffles*",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -814,6 +830,7 @@
       "_comment": "Part of Scene 1",
       "text": "...Ok...",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -914,6 +931,7 @@
       "_comment": "Part of Scene 1",
       "text": "Hello Ma’am, do you know a kid named “(MC’s Name)”?",
       "character": "Police",
+      "char_img": "images/characters/police/embarrassed.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -953,6 +971,7 @@
       "_comment": "Part of Scene 1",
       "text": "Oh, no.. I’m his father’s friend",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -966,6 +985,7 @@
       "_comment": "Part of Scene 1",
       "text": "And there’s something I should tell the boy in private..",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -979,6 +999,7 @@
       "_comment": "Part of Scene 1",
       "text": "It’s about his parents...",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1017,6 +1038,7 @@
       "_comment": "Part of Scene 1",
       "text": "...",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1030,6 +1052,7 @@
       "_comment": "Part of Scene 1",
       "text": "(MC’s Name)...",
       "character": "Police",
+      "char_img": "images/characters/police/embarrassed.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1043,6 +1066,7 @@
       "_comment": "Part of Scene 1",
       "text": "I’m sorry you had to hear this at this time…",
       "character": "Police",
+      "char_img": "images/characters/police/embarrassed.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1056,6 +1080,7 @@
       "_comment": "Part of Scene 1",
       "text": "But your parents are dead…",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1069,6 +1094,7 @@
       "_comment": "Part of Scene 1",
       "text": "Your father was alerting us of an attack in the house..",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1082,6 +1108,7 @@
       "_comment": "Part of Scene 1",
       "text": "It seems the thugs he dealt with last time had planned to gang up on him and your mom at the house",
       "character": "Police",
+      "char_img": "images/characters/police/embarrassed.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1095,6 +1122,7 @@
       "_comment": "Part of Scene 1",
       "text": "I’m sorry..",
       "character": "Police",
+      "char_img": "images/characters/police/normal.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1108,6 +1136,7 @@
       "_comment": "Part of Scene 1",
       "text": "...",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1121,6 +1150,7 @@
       "_comment": "Part of Scene 1",
       "text": ". . .",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1134,6 +1164,7 @@
       "_comment": "Part of Scene 1",
       "text": "*starts to cry a little harder* so… am I all alone?? What do I do???",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1147,6 +1178,7 @@
       "_comment": "Part of Scene 1",
       "text": "I HAVE NO ONE TO LIVE WITH!",
       "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
       "bg_img": "images/school_night.png",
       "options": {
         "1": {
@@ -1154,7 +1186,468 @@
           "nextScene": 92
         }
       }
+    },
+
+    "92": {
+      "_comment": "Part of Scene 1",
+      "text": "EVERYONE DOESN’T EVEN SEEM TO WANT TO BE MY FRIEND IN SCHOOL!",
+      "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/cry_night.png",
+      "bg_img": "images/school_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 93
+        }
+      }
+    },
+
+    "93": {
+      "_comment": "Part of Scene 1",
+      "text": "It’s ok... Your father entrusted me to take care of you...",
+      "character": "Police",
+      "char_img": "images/characters/police/happy.png",
+      "bg_img": "images/school_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 94
+        }
+      }
+    },
+
+    "94": {
+      "_comment": "Part of Scene 1",
+      "text": "…Ok..",
+      "character": "MC",
+      "char_img": "images/characters/MC_YOUNG/sad_night.png",
+      "bg_img": "images/school_night.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 95
+        }
+      }
+    },
+
+    "95": {
+      "_comment": "Part of Scene 1",
+      "text": "",
+      "bg_img": "images/chapter3/scene_95.gif",
+      "oneShotGif": true,
+      "isTransition": true,
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 96
+        }
+      }
+    },
+
+    "96": {
+      "_comment": "Part of Scene 1",
+      "text": "…After going home with Dad’s “friend”",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 97
+        }
+      }
+    },
+
+    "97": {
+      "_comment": "Part of Scene 1",
+      "text": "He kept you in a room and just locked you there",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 98
+        }
+      }
+    },
+
+    "98": {
+      "_comment": "Part of Scene 1",
+      "text": "You didn’t realize his actions on you up until he got arrested",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 99
+        }
+      }
+    },
+
+    "99": {
+      "_comment": "Part of Scene 1",
+      "text": "That’s when you realize he wasn’t just a cop…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 100
+        }
+      }
+    },
+
+    "100": {
+      "_comment": "Part of Scene 1",
+      "text": "He was a pedophile..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 101
+        }
+      }
+    },
+
+    "101": {
+      "_comment": "Part of Scene 1",
+      "text": "He was after your Dad’s trust to be able to have you alone when your Dad and Mom are gone…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 102
+        }
+      }
+    },
+
+    "102": {
+      "_comment": "Part of Scene 1",
+      "text": "He was also the one who helped the gang ambush your parents",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 103
+        }
+      }
+    },
+
+    "103": {
+      "_comment": "Part of Scene 1",
+      "text": "and the bully who’s been bullying you is his child..and also the one who’s in love with her…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 104
+        }
+      }
+    },
+
+    "104": {
+      "_comment": "Part of Scene 1",
+      "text": "Afterwards, The Police sent you to an orphanage to be taken care of",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 105
+        }
+      }
+    },
+
+    "105": {
+      "_comment": "Part of Scene 1",
+      "text": "But the kids also treated you like your classmates during your first day of school…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 106
+        }
+      }
+    },
+
+    "106": {
+      "_comment": "Part of Scene 1",
+      "text": "That’s when your “Mom” and “Dad” came to pick you…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 107
+        }
+      }
+    },
+
+    "107": {
+      "_comment": "Part of Scene 1",
+      "text": "Not because they want you..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 108
+        }
+      }
+    },
+
+    "108": {
+      "_comment": "Part of Scene 1",
+      "text": "But because you were only something that they couldn’t gain.. a child",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 109
+        }
+      }
+    },
+
+    "109": {
+      "_comment": "Part of Scene 1",
+      "text": "They were as abusive as your dad’s “friend”..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 110
+        }
+      }
+    },
+
+    "110": {
+      "_comment": "Part of Scene 1",
+      "text": "And your “Dad” left because he got tired of you taking too much expense..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 111
+        }
+      }
+    },
+
+    "111": {
+      "_comment": "Part of Scene 1",
+      "text": "Because of “me”…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 112
+        }
+      }
+    },
+
+    "112": {
+      "_comment": "Part of Scene 1",
+      "text": "The days kept going in a cycle…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 113
+        }
+      }
+    },
+
+    "113": {
+      "_comment": "Part of Scene 1",
+      "text": "Being abused, being bullied, being treated like shit…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 114
+        }
+      }
+    },
+
+    "114": {
+      "_comment": "Part of Scene 1",
+      "text": "That was the time it arrived..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 115
+        }
+      }
+    },
+
+    "115": {
+      "_comment": "Part of Scene 1",
+      "text": "How I arrived…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 116
+        }
+      }
+    },
+
+    "116": {
+      "_comment": "Part of Scene 1",
+      "text": "I became your protector..I became your savior from your surroundings..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 117
+        }
+      }
+    },
+
+    "117": {
+      "_comment": "Part of Scene 1",
+      "text": "To destroy what you can’t destroy",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 118
+        }
+      }
+    },
+
+    "118": {
+      "_comment": "Part of Scene 1",
+      "text": "To eliminate what you can’t kill",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 119
+        }
+      }
+    },
+
+    "119": {
+      "_comment": "Part of Scene 1",
+      "text": "I did all the work for YOU",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 120
+        }
+      }
+    },
+
+    "120": {
+      "_comment": "Part of Scene 1",
+      "text": "..Now..we ended up here…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 121
+        }
+      }
+    },
+
+    "121": {
+      "_comment": "Part of Scene 1",
+      "text": "I don’t remember how we got here…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 122
+        }
+      }
+    },
+
+    "122": {
+      "_comment": "Part of Scene 1",
+      "text": "But all I know is..we have to escape and be free from the past, from the pain..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 123
+        }
+      }
+    },
+
+    "123": {
+      "_comment": "Part of Scene 1",
+      "text": "The stress and torment crawled on you like bugs on a tree, and it made me your guardian..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 124
+        }
+      }
+    },
+
+    "124": {
+      "_comment": "Part of Scene 1",
+      "text": "..So, as your guardian",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 125
+        }
+      }
+    },
+
+    "125": {
+      "_comment": "Part of Scene 1",
+      "text": "We should leave and move on, find a way to wake up again..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 126
+        }
+      }
+    },
+
+    "126": {
+      "_comment": "Part of Scene 1",
+      "text": "There’s no time to waste..let's go.",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextChapter": 4
+        }
+      }
     }
+
+
 
 
 
