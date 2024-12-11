@@ -77,7 +77,7 @@ public class SceneManager
             }
         });
 
-        var fileManager = new FileManager(null,this);
+        var fileManager = new FileManager(null,this, this.frame);
         textSpeed = fileManager.GetSettings().textSpeed;
         windowType = fileManager.GetSettings().windowType;
 
@@ -86,6 +86,9 @@ public class SceneManager
 
 
         frame.setVisible(true);
+
+
+
     }
 
     public void LoadStoryData()
@@ -345,10 +348,11 @@ public class SceneManager
     public void PlayOneShotGif(String gifPath) throws IOException
     {
         _gifFrames = loadGif(gifPath);
-
+        _option1Button.setVisible(false);
+        _option2Button.setVisible(false);
         _textPanel.setPreferredSize(new Dimension(_resolutionX, _textAreaHeight));
         _textPanel.setBounds(0, 0, _resolutionX, _textAreaHeight);
-        _option1Button.setVisible(false);
+
 
         _isPlayingAnimation = true;
 
@@ -362,13 +366,14 @@ public class SceneManager
 
                 //Go to next scene after animation
                 JsonNode sceneNode = _storyData.get("scenes").get(String.valueOf(currentScene));
+                LoadDialogueButtons();
+                _isPlayingAnimation = false;
                 if (sceneNode.has("isTransition"))
                 {
                     currentScene = sceneNode.get("options").get("1").get("nextScene").asInt();
                     DisplayScene();
                 }
-                _option1Button.setVisible(true);
-                _isPlayingAnimation = false;
+
             }
         });
 
@@ -406,9 +411,13 @@ public class SceneManager
             frame.dispose();
             //undecorated = no borders, title bar
             frame.setUndecorated(true);
-            //Fullscreen
             frame.setResizable(false);
-            gs.setFullScreenWindow(frame);
+
+            int screenWidth = gs.getDefaultConfiguration().getBounds().width;
+            int screenHeight = gs.getDefaultConfiguration().getBounds().height;
+
+            frame.setSize(screenWidth, screenHeight);
+            frame.setLocation(0, 0);
         }
         else if (windowType == 1)
         {
@@ -416,7 +425,10 @@ public class SceneManager
             gs.setFullScreenWindow(null);
             frame.setUndecorated(false);
             frame.setResizable(true);
-            frame.setSize(1280, 720);
+            var fileManager = new FileManager(null,this, this.frame);
+            int resolutionX = fileManager.GetSettings().resolutionX;
+            int resolutionY = fileManager.GetSettings().resolutionY;
+            frame.setSize(resolutionX, resolutionY);
             frame.setLocationRelativeTo(null);
         }
         LoadDialogueButtons();

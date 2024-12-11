@@ -60,14 +60,14 @@ public class PauseMenuDialog extends JDialog
         //Save button (save game)
         _saveButton.addActionListener(e ->
         {
-            var fileManager = new FileManager(this, _sceneManager);
+            var fileManager = new FileManager(this, _sceneManager, parentFrame);
             fileManager.SaveGame();
         });
 
         //Load button
         _loadButton.addActionListener(e ->
         {
-            var fileManager = new FileManager(this, _sceneManager);
+            var fileManager = new FileManager(this, _sceneManager, parentFrame);
             fileManager.LoadGame();
         });
 

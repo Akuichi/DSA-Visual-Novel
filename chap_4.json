@@ -1,0 +1,435 @@
+{
+  "chapter": 4,
+  "scenes":
+  {
+    "0": {
+      "_comment": "Title",
+      "text": "",
+      "bg_img": "images/chapter4.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    },
+
+    "1": {
+      "text": "Ok… Listen to me",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 2
+        }
+      }
+    },
+
+    "2": {
+      "text": "The only way we can leave is to surpass all the memories",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 3
+        }
+      }
+    },
+
+    "3": {
+      "text": "That locket you have is our ONLY way out!",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 4
+        }
+      }
+    },
+
+    "4": {
+      "text": "Without that... you wouldn’t be here…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 5
+        }
+      }
+    },
+
+    "5": {
+      "text": "Because of her…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 6
+        }
+      }
+    },
+
+    "6": {
+      "text": "Your first friend…",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 7
+        }
+      }
+    },
+
+    "7": {
+      "text": "But enough of this, We have to move!",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 8
+        }
+      }
+    },
+
+    "8": {
+      "text": "I’ll take control..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Let “Me” Control",
+          "nextScene": 9
+        },
+        "2": {
+          "text": "Let Me Control",
+          "nextScene": 11
+        }
+      }
+    },
+
+    "9": {
+      "_comment": "Part of Choice 1",
+      "text": "",
+      "bg_img": "images/chapter4/scene_9.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 10
+        }
+      }
+    },
+
+    "10": {
+      "_comment": "Part of Choice 1",
+      "text": "Ok..It’s time to move",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 14
+        }
+      }
+    },
+
+    "11": {
+      "_comment": "Part of Choice 2",
+      "text": "Are you sure you want to be the one to control?",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "I got this, trust me",
+          "nextScene": 12
+        },
+        "2": {
+          "text": "Fine.. just.. be gentle..",
+          "nextScene": 9
+        }
+      }
+    },
+
+    "12": {
+      "_comment": "Part of Choice 2",
+      "text": "..Alright..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 13
+        }
+      }
+    },
+
+    "13": {
+      "_comment": "Part of Choice 2",
+      "text": "Just follow what I say..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 14
+        }
+      }
+    },
+
+    "14": {
+      "_comment": "Part of Choice 2",
+      "text": "",
+      "bg_img": "images/chapter4/scene_14.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 15
+        }
+      }
+    },
+
+    "15": {
+      "text": "First, I have to find the reason to make you move forward",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 16
+        }
+      }
+    },
+
+
+    "16": {
+      "text": "I know she’s here somewhere, lost as you are..",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 17
+        }
+      }
+    },
+
+    "17": {
+      "text": "Let’s find your friend!",
+      "character": "“Me”",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 34
+        }
+      }
+    },
+
+      "34": {
+        "text": "",
+        "bg_img": "images/memories_transition.gif",
+        "oneShotGif": true,
+        "isTransition": true,
+        "options": {
+          "1": {
+            "text": "Continue",
+            "nextScene": 18
+          }
+        }
+      },
+
+      "18": {
+        "text": "“I” or maybe We decided to explore the dark abyss, trying to find my only friend",
+        "bg_img": "images/memories.gif",
+        "options": {
+          "1": {
+            "text": "Continue",
+            "nextScene": 19
+          }
+        }
+      },
+
+    "19": {
+      "text": "While exploring, it seems that the memories surrounding us are all just the bad ones.",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 20
+        }
+      }
+    },
+
+    "20": {
+      "text": "I couldn’t bear it.. but.. I seem to be taking control..",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 21
+        }
+      }
+    },
+
+    "21": {
+      "text": "I want to go back…",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 22
+        }
+      }
+    },
+
+    "22": {
+      "character": "“Me”",
+      "text": "DON’T LET THOSE STOP YOU!",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 23
+        }
+      }
+    },
+
+    "23": {
+      "character": "“Me”",
+      "text": "YOU KNOW THOSE ARE LONG GONE!",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 24
+        }
+      }
+    },
+
+    "24": {
+      "character": "“Me”",
+      "text": "IF YOU WANT TO ESCAPE THE PAST, YOU FIRST HAVE TO FIND THE REASON TO MOVE FORWARD",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 25
+        }
+      }
+    },
+
+    "25": {
+      "character": "“Me”",
+      "text": "SOMETHING THAT YOU NEVER THOUGHT WAS THERE BUT WAS MEANT FOR YOU AND YOU ALONE",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 26
+        }
+      }
+    },
+
+    "26": {
+      "character": "“Me”",
+      "text": "KEEP. MOVING. FORWARD.",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 27
+        }
+      }
+    },
+
+    "27": {
+      "text": "…They’re right…",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 28
+        }
+      }
+    },
+
+    "28": {
+      "text": "I have to do this..",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 29
+        }
+      }
+    },
+
+    "29": {
+      "text": "For Me…",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 30
+        }
+      }
+    },
+
+    "30": {
+      "text": "For Her…",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 31
+        }
+      }
+    },
+
+    "31": {
+      "text": "My Reason",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 32
+        }
+      }
+    },
+
+    "32": {
+      "text": "I won’t stop now, I need to wake up",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 33
+        }
+      }
+    },
+
+    "33": {
+      "text": "I have to wake up…",
+      "bg_img": "images/memories.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextChapter": 5
+        }
+      }
+    }
+
+
+
+
+
+
+  }
+}
+

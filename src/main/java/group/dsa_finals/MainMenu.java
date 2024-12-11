@@ -2,7 +2,6 @@ package group.dsa_finals;
 
 import javax.swing.*;
 import java.awt.*;
-
 public class MainMenu extends JFrame
 {
     private Image _backgroundImage;
@@ -15,17 +14,51 @@ public class MainMenu extends JFrame
     private void DrawGUIComponents()
     {
         setTitle("Main Menu");
-        setSize(1280,720);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         _backgroundImage = new ImageIcon("images/mainmenu.png").getImage();
 
         add(new MenuPanel());
-
+        SetWindowType();
         // Make the frame visible
         setVisible(true);
 
+    }
+
+    public void SetWindowType()
+    {
+        var fileManager = new FileManager(null, null, this);
+        int windowType = fileManager.GetSettings().windowType;
+        setVisible(false);
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice gs = ge.getDefaultScreenDevice();
+        if (windowType == 0)
+        {
+            dispose();
+            setUndecorated(true);  //Remove the title bar and borders
+            setResizable(false);
+
+            //Set the window size to screen's resolution
+            int screenWidth = gs.getDefaultConfiguration().getBounds().width;
+            int screenHeight = gs.getDefaultConfiguration().getBounds().height;
+            setSize(screenWidth, screenHeight);
+
+            setLocation(0, 0);
+            setVisible(true);
+        }
+        else if (windowType == 1)
+        {
+            dispose();
+            gs.setFullScreenWindow(null);
+            setUndecorated(false);
+            setResizable(true);
+            int resolutionX = fileManager.GetSettings().resolutionX;
+            int resolutionY = fileManager.GetSettings().resolutionY;
+            setSize(resolutionX, resolutionY);
+            setLocationRelativeTo(null);
+            setVisible(true);
+        }
     }
 
     private void NewGame()
@@ -37,7 +70,7 @@ public class MainMenu extends JFrame
     private void LoadGame()
     {
         dispose();
-        var fileManager = new FileManager(null,null);
+        var fileManager = new FileManager(null,null, this);
         fileManager.LoadGame();
 
     }
@@ -45,6 +78,12 @@ public class MainMenu extends JFrame
     private void ExitGame()
     {
         System.exit(0);
+    }
+
+    private void Settings()
+    {
+        var settingsDialog = new SettingsDialog(this, null);
+        settingsDialog.setVisible(true);
     }
 
     private class MenuPanel extends JPanel
@@ -61,6 +100,7 @@ public class MainMenu extends JFrame
 
             JButton newGameButton = new JButton("New Game");
             JButton loadGameButton = new JButton("Load Game");
+            JButton settingsButton = new JButton("Settings");
             JButton exitButton = new JButton("Exit");
 
 
@@ -70,12 +110,14 @@ public class MainMenu extends JFrame
             loadGameButton.addActionListener(e -> LoadGame());
 
             exitButton.addActionListener(e -> ExitGame());
+            settingsButton.addActionListener(e -> Settings());
             //----
 
 
             //Add buttons to the panel
             buttonPanel.add(newGameButton);
             buttonPanel.add(loadGameButton);
+            buttonPanel.add(settingsButton);
             buttonPanel.add(exitButton);
 
             //Add button panel to the main panel (centered bottom)
