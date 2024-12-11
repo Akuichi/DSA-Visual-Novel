@@ -1,11 +1,10 @@
 {
   "chapter": 5,
-  "scenes":
-  {
+  "scenes": {
     "0": {
-      "_comment": "Title",
+      "_comment": "Chapter 5 Header",
       "text": "",
-      "bg_img": "",
+      "bg_img": "images/chapter5.png",
       "options": {
         "1": {
           "text": "Continue",
@@ -13,21 +12,681 @@
         }
       }
     },
-
     "1": {
-      "_comment": "Part of Scene 1",
+      "_comment": "Chapter 5",
+      "text": "After a long run from the abyss...",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 2
+        }
+      }
+    },
+    "2": {
+      "_comment": "Chapter 5",
+      "text": "Do I still want to continue?..",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 3
+        }
+      }
+    },
+    "3": {
+      "_comment": "Chapter 5",
+      "text": "'I' couldn't even find her..",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 4
+        }
+      }
+    },
+    "4": {
+      "_comment": "Chapter 5",
+      "text": "...",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 5
+        }
+      }
+    },
+    "5": {
+      "_comment": "Chapter 5",
+      "text": "I guess this is it...",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 6
+        }
+      }
+    },
+    "6": {
+      "_comment": "Chapter 5",
+      "text": "I won't be able to go back..",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 7
+        }
+      }
+    },
+    "7": {
+      "_comment": "Chapter 5",
+      "text": "At least I won't have a reason to live anymore..",
+      "bg_img": "images/void.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 8
+        }
+      }
+    },
+    "8": {
+      "_comment": "Chapter 5",
+      "character": "?",
+      "text": "(MC name)",
+      "char_img": "images/characters/elise/Normal.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 9
+        }
+      }
+    },
+    "9": {
+      "_comment": "Chapter 5",
+      "character": "MC",
+      "text": "..??",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 10
+        }
+      }
+    },
+
+    "10": {
+      "_comment": "Chapter 5",
+      "character": "MC",
+      "text": "..Elise??",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 11
+        }
+      }
+    },
+
+
+
+    "11": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "*smiles* omg...",
+      "char_img": "images/characters/elise/Delighted.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 12
+        }
+      }
+    },
+    "12": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "*cries* it's you..",
+      "char_img": "images/characters/elise/sad.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 13
+        }
+      }
+    },
+    "13": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "I miss you!",
+      "char_img": "images/characters/elise/sad.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 14
+        }
+      }
+    },
+    "14": {
+      "_comment": "Chapter 5",
+      "text": "*Elise rushes and hugs me tight*",
+      "char_img": "images/characters/elise/sad.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 15
+        }
+      }
+    },
+    "15": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "I’m sorry I had to leave..It was because my parents didn’t want to be traumatized about the incident...",
+      "char_img": "images/characters/elise/sad.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 16
+        }
+      }
+    },
+    "16": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "They were also the ones who also called for help that day..Are you feeling well?",
+      "char_img": "images/characters/elise/sad.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "I’m ok..I’m just happy to see you again.. you're a lot more beautiful now..",
+          "nextScene": 177
+        },
+        "2": {
+          "text": "Yeah..It’s really nice to see you again.. you don’t look like a reptile like last time..",
+          "nextScene": 17
+        }
+      }
+    },
+    "17": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "Hehe~ *blushes* Thanks <3",
+      "char_img": "images/characters/elise/Smile2.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "... ",
+          "nextScene": 18
+        }
+      }
+    },
+
+    "18": {
+      "_comment": "Chapter 5",
+      "text": "Here..",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 19
+        }
+      }
+    },
+
+    "19": {
+      "_comment": "Chapter 5",
+      "text": "..Ah! Wait! I need you right now!",
+      "char_img": "images/characters/mc/5_sad smile.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 20
+        }
+      }
+    },
+
+    "20": {
+      "_comment": "Chapter 5",
+      "text": "It’s hard to explain but the other me sai-",
+      "char_img": "images/characters/mc/5_sad smile.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 21
+        }
+      }
+    },
+    "21": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "I know.. don’t worry..I was also waiting for this moment..",
+      "char_img": "images/characters/elise/Smile.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 22
+        }
+      }
+    },
+    "22": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "And for you of course~!",
+      "char_img": "images/characters/elise/Smile2.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 23
+        }
+      }
+    },
+
+    "23": {
+      "_comment": "Chapter 5",
+      "text": "Hehe.. *Blushes*",
+      "char_img": "images/characters/mc/5_aha.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 24
+        }
+      }
+    },
+
+
+    "24": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "Ok lovebirds! You can talk more when you see each other again!",
+      "char_img": "images/characters/mc/5_mad smile.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 25
+        }
+      }
+    },
+
+    "25": {
+      "_comment": "Chapter 5",
+      "text": "Again?..",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 26
+        }
+      }
+    },
+
+
+
+    "26": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": " ..She’s waiting for you to wake up..",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 27
+        }
+      }
+    },
+
+    "27": {
+      "_comment": "Chapter 5",
+      "text": "..You mean?",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 28
+        }
+      }
+    },
+
+
+
+    "28": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "yeah…you both are together",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 29
+        }
+      }
+    },
+
+
+    "29": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "But enough, we're wasting time, I’m going to use the locket now..",
+      "char_img": "images/characters/mc/5_thinking.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 30
+        }
+      }
+    },
+
+    "30": {
+      "_comment": "Chapter 5",
+      "text": " ..Ok..",
+      "char_img": "images/characters/mc/5_normal.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 31
+        }
+      }
+    },
+
+
+    "31": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "..See you up there, (MC’s Name)..",
+      "char_img": "images/characters/elise/Smile.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 32
+        }
+      }
+    },
+
+
+    "32": {
+      "_comment": "Chapter 5",
+      "text": "",
+      "bg_img": "images/chapter5/scene_32.png",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 33
+        }
+      }
+    },
+    "33": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "..Goodbye for now <3",
+      "char_img": "images/characters/elise/Smile2.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 34
+        }
+      }
+    },
+
+    "34": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "...",
+      "char_img": "images/characters/elise/Smile2.png",
+      "bg_img": "images/school.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 36
+        }
+      }
+    },
+
+    "36": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "bg_img": "images/unknown.gif",
+      "text": "There...",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 37
+        }
+      }
+    },
+    "37": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": " Now, you’ll have your reason to move forward now...",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 38
+        }
+      }
+    },
+    "38": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "Now it’s ti-",
+      "bg_img": "images/unknown.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 39
+        }
+      }
+    },
+
+
+    "39": {
+      "_comment": "Chapter 5",
+      "text": "",
+      "bg_img": "images/chapter5/scene_39.gif",
+      "oneShotGif": true,
+      "isTransition": true,
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 40
+        }
+      }
+    },
+    "40": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "Ah-",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 41
+        }
+      }
+    },
+    "41": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "It’s earlier than I thought..",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 42
+        }
+      }
+    },
+    "42": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "Well...",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 43
+        }
+      }
+    },
+    "43": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "You won’t be able to hear from me again..",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 44
+        }
+      }
+    },
+    "44": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": " But you’ll know when I strike..",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 45
+        }
+      }
+    },
+    "45": {
+      "_comment": "Chapter 5",
+      "character": "'Me'",
+      "text": "Take care..Me..",
+      "bg_img": "images/chapter5/scene_40.gif",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 46
+        }
+      }
+    },
+    "46": {
+      "_comment": "Chapter 5",
+      "text": "",
+      "bg_img": "images/chapter5/scene_46.gif",
+      "oneShotGif": true,
+      "isTransition": true,
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 48
+        }
+      }
+    },
+    "48": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "char_img": "images/characters/elise/Normal.png",
+      "bg_img": "images/dining_room.png",
+      "text": "...",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 49
+        }
+      }
+    },
+    "49": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "char_img": "images/characters/elise/Shocked.png",
+      "bg_img": "images/dining_room.png",
+      "text": "..?!",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 50
+        }
+      }
+    },
+    "50": {
+      "_comment": "Chapter 5",
+      "character": "Elise",
+      "text": "(MC's name)...?",
+      "char_img": "images/characters/elise/Shocked.png",
+      "bg_img": "images/dining_room.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 51
+        }
+      }
+    },
+    "51": {
+      "_comment": "Chapter 5",
+      "text": "...",
+      "char_img": "images/characters/mc/5_deep.png",
+      "bg_img": "images/dining_room.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 52
+        }
+      }
+    },
+
+    "52": {
+      "_comment": "Chapter 5",
+      "text": "Hi, Dear...",
+      "char_img": "images/characters/mc/5_sad smile.png",
+      "bg_img": "images/dining_room.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 53
+        }
+      }
+    },
+
+    "53": {
+      "_comment": "Chapter 5",
+      "text": "I’m Home <3 ",
+      "char_img": "images/characters/mc/5_giveup.png",
+      "bg_img": "images/dining_room.png",
+      "options": {
+        "1": {
+          "text": "...",
+          "nextScene": 54
+        }
+      }
+    },
+
+    "54": {
+      "_comment": "Chapter 5",
       "text": "",
       "bg_img": "images/credits.gif",
       "options": {
         "1": {
-          "text": "Continue",
+          "text": "Return to Main Menu",
           "ending": true
         }
       }
     }
 
-
-
   }
 }
-
+    
