@@ -80,7 +80,7 @@ public class PauseMenuDialog extends JDialog
                     "Quit to Main Menu",
                     JOptionPane.YES_NO_OPTION
             );
-            if (response == JOptionPane.NO_OPTION) return;
+            if (response != JOptionPane.YES_OPTION) return;
             _sceneManager.frame.dispose();
             new MainMenu();
             dispose();
@@ -95,7 +95,7 @@ public class PauseMenuDialog extends JDialog
                     "Quit to Desktop",
                     JOptionPane.YES_NO_OPTION
             );
-            if (response == JOptionPane.NO_OPTION) return;
+            if (response != JOptionPane.YES_OPTION) return;
             System.exit(0);
         });
 

@@ -1,0 +1,33 @@
+{
+  "chapter": 5,
+  "scenes":
+  {
+    "0": {
+      "_comment": "Title",
+      "text": "",
+      "bg_img": "",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "nextScene": 1
+        }
+      }
+    },
+
+    "1": {
+      "_comment": "Part of Scene 1",
+      "text": "",
+      "bg_img": "images/credits.gif",
+      "options": {
+        "1": {
+          "text": "Continue",
+          "ending": true
+        }
+      }
+    }
+
+
+
+  }
+}
+

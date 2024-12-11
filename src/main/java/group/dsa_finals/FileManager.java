@@ -35,7 +35,7 @@ public class FileManager
                 "Confirm Save",
                 JOptionPane.YES_NO_OPTION
         );
-        if (response == JOptionPane.NO_OPTION) return; //if no yung response, return;
+        if (response != JOptionPane.YES_OPTION) return; //if hindi YES yung response, return;
 
         File folder = new File(_saveFolderPath);
         //check kung may saved_games folder na ba or not
@@ -89,7 +89,7 @@ public class FileManager
                     "Confirm Load Game",
                     JOptionPane.YES_NO_OPTION
             );
-            if (response == JOptionPane.NO_OPTION) return; //if no yung response, return;
+            if (response != JOptionPane.YES_OPTION) return; //if hindi YES yung response, return;
 
             ObjectMapper mapper = new ObjectMapper();
             try

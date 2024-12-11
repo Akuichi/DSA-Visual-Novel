@@ -278,6 +278,15 @@ public class SceneManager
         if (optionsNode.has(String.valueOf(option))) //If may option (from int option, this is either 1 or 2) continue
         {
             JsonNode optionNode = optionsNode.get(String.valueOf(option));
+            if (optionNode.has("ending"))
+            {
+                if (optionNode.get("ending").asBoolean())
+                {
+                    //if ending yung nasa json ibig sabihin last na yun
+                    new MainMenu();
+                    frame.dispose();
+                }
+            }
             if (optionNode.has("nextChapter")) //check if may chapter, if yes change chapters
             {
                 currentChapter = optionNode.get("nextChapter").asInt();
@@ -437,7 +446,7 @@ public class SceneManager
 
     private void DrawGUIComponents()
     {
-        frame = new JFrame("Visual Novel");
+        frame = new JFrame("Lost in the Memories v1.0");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1280, 720);
         frame.setResizable(true);
